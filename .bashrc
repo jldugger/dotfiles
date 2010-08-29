@@ -96,3 +96,6 @@ alias diff='diff -Naur'
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
+
+# set PATH to include private bin
+export PATH=~/bin:"${PATH}"
