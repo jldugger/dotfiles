@@ -1,0 +1,6 @@
+[my-ppa]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~jldugger/ubuntu/
+login = anonymous
+allow_unsigned_uploads = 0
