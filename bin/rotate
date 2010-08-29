@@ -1,11 +1,23 @@
 #!/bin/sh
-rotation=`xrandr -q --verbose | grep "^default connected" | cut -d" " -f5`
-echo $rotation;
-if [ $rotation = "normal" ] ;
-then
-xrandr -o inverted
-xsetwacom set stylus rotate half
-else
-xrandr -o normal
-xsetwacom set stylus rotate 0
-fi
+rotation=`xrandr -q --verbose | grep "^LVDS-0 connected" | cut -d" " -f5`
+
+case "$rotation" in
+   'normal')   
+      xrandr -o inverted
+      xsetwacom set stylus rotate half
+         ;;   
+   'inverted')
+      xrandr -o left
+      xsetwacom set stylus rotate 2
+         ;;
+   'left')
+      xrandr -o right
+      xsetwacom set stylus rotate 1
+         ;;
+   'right'	)
+      xrandr -o normal
+      xsetwacom set stylus rotate 0
+         ;;
+esac
+
+
