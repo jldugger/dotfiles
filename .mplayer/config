@@ -1,0 +1,5 @@
+# Write your default config options here!
+sid=0
+#ass=1
+correct-pts=1
+embeddedfonts=1

@@ -1,0 +1,14 @@
+$HISCORES = [
+              {
+                'level' => 4,
+                'piclevel' => 2,
+                'time' => '50.308',
+                'name' => 'Juinst'
+              },
+              {
+                'piclevel' => 4,
+                'level' => 38,
+                'time' => '1780.092',
+                'name' => 'jldugger'
+              }
+            ];
