@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<inkscape
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="0.45">
+  <group
+     id="window">
+    <group
+       id="menu"
+       state="1" />
+    <group
+       id="commands"
+       state="1" />
+    <group
+       id="toppanel"
+       state="1" />
+    <group
+       id="toolbox"
+       state="1" />
+    <group
+       id="statusbar"
+       state="1" />
+    <group
+       id="panels"
+       state="1" />
+    <group
+       id="rulers"
+       state="1" />
+    <group
+       id="scrollbars"
+       state="1" />
+  </group>
+  <group
+     id="fullscreen">
+    <group
+       id="menu"
+       state="1" />
+    <group
+       id="commands"
+       state="1" />
+    <group
+       id="toppanel"
+       state="1" />
+    <group
+       id="toolbox"
+       state="1" />
+    <group
+       id="statusbar"
+       state="1" />
+    <group
+       id="panels"
+       state="1" />
+    <group
+       id="rulers"
+       state="1" />
+    <group
+       id="scrollbars"
+       state="1" />
+  </group>
+  <group
+     id="documents">
+    <group
+       id="recent">
+      <document
+         name="rose.svg"
+         uri="/home/jldugger/rose.svg" />
+      <document
+         uri="/home/jldugger/Desktop/eclipse.svg"
+         name="eclipse.svg" />
+      <document
+         uri="/home/jldugger/Desktop/source.svg"
+         name="source.svg" />
+      <document
+         uri="/home/jldugger/Desktop/Cone-response.svg"
+         name="Cone-response.svg" />
+      <document
+         name="CIExy1931.svg"
+         uri="/home/jldugger/Desktop/CIExy1931.svg" />
+      <document
+         name="ubuntu-screensaver.svg"
+         uri="/usr/share/pixmaps/ubuntu-screensaver.svg" />
+      <document
+         uri="/usr/share/icons/hicolor/scalable/apps/gnome-sudoku.svg"
+         name="gnome-sudoku.svg" />
+      <document
+         name="eclipse-icon-cleaner.svg"
+         uri="/home/jldugger/Desktop/eclipse-icon-cleaner.svg" />
+      <document
+         uri="/home/jldugger/Desktop/eclipse-icon-clean.svg"
+         name="eclipse-icon-clean.svg" />
+      <document
+         uri="/home/jldugger/Desktop/OpenID_logo.svg"
+         name="OpenID_logo.svg" />
+    </group>
+  </group>
+  <group
+     id="template">
+    <sodipodi:namedview
+       id="base"
+       pagecolor="#ffffff"
+       bordercolor="#666666"
+       borderopacity="1.0"
+       objecttolerance="10.0"
+       gridtolerance="10.0"
+       guidetolerance="10.0"
+       inkscape:pageopacity="0.0"
+       inkscape:pageshadow="2"
+       inkscape:window-width="640"
+       inkscape:window-height="480" />
+  </group>
+  <group
+     id="tools"
+     style="fill:none;stroke:black;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;">
+    <group
+       id="shapes"
+       style="fill-rule:evenodd;"
+       selcue="1"
+       gradientdrag="1">
+      <eventcontext
+         id="rect"
+         style="fill:blue;"
+         usecurrent="1"
+         width="211.24739"
+         height="353.90704"
+         rx="0"
+         ry="97.14286" />
+      <eventcontext
+         id="3dbox"
+         style="stroke:none;stroke-linejoin:round;"
+         usecurrent="1">
+        <side
+           id="XYfront"
+           style="fill:#8686bf;stroke:none;stroke-linejoin:round;"
+           usecurrent="0" />
+        <side
+           id="XYrear"
+           style="fill:#e9e9ff;stroke:none;stroke-linejoin:round;"
+           usecurrent="0" />
+        <side
+           id="XZtop"
+           style="fill:#4d4d9f;stroke:none;stroke-linejoin:round;"
+           usecurrent="0" />
+        <side
+           id="XZbottom"
+           style="fill:#afafde;stroke:none;stroke-linejoin:round;"
+           usecurrent="0" />
+        <side
+           id="YZright"
+           style="fill:#353564;stroke:none;stroke-linejoin:round;"
+           usecurrent="0" />
+        <side
+           id="YZleft"
+           style="fill:#d7d7ff;stroke:none;stroke-linejoin:round;"
+           usecurrent="0" />
+      </eventcontext>
+      <eventcontext
+         id="arc"
+         style="fill:red;"
+         end="0"
+         start="0"
+         usecurrent="1" />
+      <eventcontext
+         id="star"
+         magnitude="5"
+         style="fill:yellow;"
+         usecurrent="1"
+         proportion="0.5"
+         rounded="0"
+         randomized="0" />
+      <eventcontext
+         id="spiral"
+         style="fill:none;"
+         usecurrent="0"
+         revolution="5"
+         expansion="1"
+         t0="0" />
+    </group>
+    <group
+       id="freehand"
+       style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-linejoin:miter;stroke-linecap:butt;">
+      <eventcontext
+         id="pencil"
+         tolerance="4.0"
+         selcue="1"
+         style="stroke-width:1px;"
+         usecurrent="0" />
+      <eventcontext
+         id="pen"
+         mode="drag"
+         selcue="1"
+         style="stroke-width:1px;"
+         usecurrent="0" />
+    </group>
+    <eventcontext
+       id="calligraphic"
+       style="fill:black;fill-opacity:1;fill-rule:nonzero;stroke:none;"
+       mass="0.02"
+       drag="1"
+       angle="30"
+       width="0.15"
+       thinning="0.1"
+       flatness="0.9"
+       cap_rounding="0"
+       usecurrent="1"
+       tracebackground="0"
+       usepressure="0"
+       usetilt="0"
+       keep_selected="1"
+       tremor="0"
+       wiggle="0" />
+    <eventcontext
+       id="text"
+       usecurrent="0"
+       gradientdrag="1"
+       font_sample="AaBbCcIiPpQq12369$€¢?.;/()"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;font-style:normal;font-weight:normal;font-size:12px;"
+       selcue="1" />
+    <eventcontext
+       id="nodes"
+       selcue="1"
+       gradientdrag="1"
+       show_handles="1"
+       sculpting_profile="1"
+       x="0"
+       y="0" />
+    <eventcontext
+       id="tweak"
+       selcue="0"
+       gradientdrag="0"
+       show_handles="0"
+       width="0.2"
+       force="0.2"
+       fidelity="0.5"
+       usepressure="1"
+       style="fill:red;stroke:none;"
+       usecurrent="0"
+       doh="1"
+       dos="1"
+       dol="1"
+       doo="1" />
+    <eventcontext
+       id="gradient"
+       selcue="1"
+       newgradient="1"
+       newfillorstroke="1" />
+    <eventcontext
+       id="zoom"
+       selcue="1"
+       gradientdrag="0" />
+    <eventcontext
+       id="dropper"
+       selcue="1"
+       gradientdrag="1"
+       pick="1"
+       setalpha="1" />
+    <eventcontext
+       id="select"
+       selcue="1"
+       gradientdrag="0" />
+    <eventcontext
+       id="connector"
+       style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-linejoin:miter;stroke-width:1px;stroke-linecap:butt;"
+       selcue="1"
+       length="100" />
+    <eventcontext
+       id="paintbucket"
+       style="fill:#a0a0a0;stroke:none;"
+       usecurrent="1"
+       threshold="1"
+       offset="0.73242188"
+       offsetunits="pt"
+       autogap="0" />
+  </group>
+  <group
+     id="palette">
+    <group
+       id="dashes">
+      <dash
+         id="solid"
+         style="stroke-dasharray:none" />
+      <dash
+         id="dash-1-1"
+         style="stroke-dasharray:1,1" />
+      <dash
+         id="dash-1-2"
+         style="stroke-dasharray:1,2" />
+      <dash
+         id="dash-1-3"
+         style="stroke-dasharray:1,3" />
+      <dash
+         id="dash-1-4"
+         style="stroke-dasharray:1,4" />
+      <dash
+         id="dash-1-6"
+         style="stroke-dasharray:1,6" />
+      <dash
+         id="dash-1-8"
+         style="stroke-dasharray:1,8" />
+      <dash
+         id="dash-1-12"
+         style="stroke-dasharray:1,12" />
+      <dash
+         id="dash-1-24"
+         style="stroke-dasharray:1,24" />
+      <dash
+         id="dash-1-48"
+         style="stroke-dasharray:1,48" />
+      <dash
+         id="dash-2-1"
+         style="stroke-dasharray:2,1" />
+      <dash
+         id="dash-3-1"
+         style="stroke-dasharray:3,1" />
+      <dash
+         id="dash-4-1"
+         style="stroke-dasharray:4,1" />
+      <dash
+         id="dash-6-1"
+         style="stroke-dasharray:6,1" />
+      <dash
+         id="dash-8-1"
+         style="stroke-dasharray:8,1" />
+      <dash
+         id="dash-12-1"
+         style="stroke-dasharray:12,1" />
+      <dash
+         id="dash-24-1"
+         style="stroke-dasharray:24,1" />
+      <dash
+         id="dash-2-2"
+         style="stroke-dasharray:2,2" />
+      <dash
+         id="dash-3-3"
+         style="stroke-dasharray:3,3" />
+      <dash
+         id="dash-4-4"
+         style="stroke-dasharray:4,4" />
+      <dash
+         id="dash-6-6"
+         style="stroke-dasharray:6,6" />
+      <dash
+         id="dash-8-8"
+         style="stroke-dasharray:8,8" />
+      <dash
+         id="dash-12-12"
+         style="stroke-dasharray:12,12" />
+      <dash
+         id="dash-24-24"
+         style="stroke-dasharray:24,24" />
+      <dash
+         id="dash-2-4"
+         style="stroke-dasharray:2,4" />
+      <dash
+         id="dash-4-2"
+         style="stroke-dasharray:4,2" />
+      <dash
+         id="dash-2-6"
+         style="stroke-dasharray:2,6" />
+      <dash
+         id="dash-6-2"
+         style="stroke-dasharray:6,2" />
+      <dash
+         id="dash-4-8"
+         style="stroke-dasharray:4,8" />
+      <dash
+         id="dash-8-4"
+         style="stroke-dasharray:8,4" />
+      <dash
+         id="dash-2-1-012-1"
+         style="stroke-dasharray:2,1,0.5,1" />
+      <dash
+         id="dash-4-2-1-2"
+         style="stroke-dasharray:4,2,1,2" />
+      <dash
+         id="dash-8-2-1-2"
+         style="stroke-dasharray:8,2,1,2" />
+      <dash
+         id="dash-012-012"
+         style="stroke-dasharray:0.5,0.5" />
+      <dash
+         id="dash-014-014"
+         style="stroke-dasharray:0.25,0.25" />
+      <dash
+         id="dash-0110-0110"
+         style="stroke-dasharray:0.1,0.1" />
+    </group>
+  </group>
+  <group
+     id="colorselector"
+     page="0" />
+  <group
+     id="embedded">
+    <group
+       id="swatches"
+       panel_size="0"
+       panel_mode="1"
+       panel_ratio="100"
+       panel_wrap="0"
+       palette="Inkscape default" />
+  </group>
+  <group
+     id="dialogs">
+    <group
+       id="toolbox" />
+    <group
+       id="fillstroke"
+       x="206473904"
+       y="1198811980"
+       w="345"
+       h="428"
+       panel_size="1"
+       panel_ratio="100"
+       panel_mode="1"
+       panel_wrap="0"
+       state="2" />
+    <group
+       id="filtereffects" />
+    <group
+       id="textandfont" />
+    <group
+       id="transformation"
+       applyseparately="0" />
+    <group
+       id="align"
+       x="608"
+       y="255"
+       w="224"
+       h="389" />
+    <group
+       id="xml"
+       x="0"
+       y="34"
+       w="1430"
+       h="837" />
+    <group
+       id="find" />
+    <group
+       id="documentoptions"
+       state="1"
+       axonomgrid_enabled="0"
+       panel_size="1"
+       panel_ratio="100"
+       panel_mode="1"
+       panel_wrap="0"
+       x="713"
+       y="0"
+       w="374"
+       h="487" />
+    <group
+       id="preferences"
+       state="1"
+       panel_size="1"
+       panel_ratio="100"
+       panel_mode="1"
+       panel_wrap="0"
+       page="16"
+       x="10"
+       y="0"
+       w="1424"
+       h="807" />
+    <group
+       id="gradienteditor"
+       x="0"
+       y="34"
+       w="1440"
+       h="841" />
+    <group
+       id="object"
+       x="596"
+       y="363"
+       w="248"
+       h="173" />
+    <group
+       id="export"
+       x="0"
+       y="34"
+       w="1440"
+       h="867">
+      <group
+         id="exportarea"
+         value="page" />
+      <group
+         id="defaultxdpi" />
+    </group>
+    <group
+       id="save_as"
+       default="org.inkscape.output.svg.inkscape"
+       append_extension="1"
+       enable_preview="1"
+       path="/home/jldugger" />
+    <group
+       id="open"
+       enable_preview="1"
+       path="/home/jldugger/Desktop/Cone-response.svg/" />
+    <group
+       id="debug"
+       redirect="0" />
+    <group
+       id="clonetiler" />
+    <group
+       id="gridtiler" />
+    <group
+       id="extension-error"
+       show-on-startup="0" />
+    <group
+       id="memory" />
+    <group
+       id="messages" />
+    <group
+       id="swatches" />
+    <group
+       id="iconpreview" />
+    <group
+       id="aboutextensions" />
+    <group
+       id="treeeditor" />
+    <group
+       id="layers"
+       maxDepth="20"
+       panel_size="1"
+       panel_ratio="100"
+       panel_mode="1"
+       panel_wrap="0"
+       state="2"
+       x="3072"
+       y="0"
+       w="283"
+       h="203" />
+    <group
+       id="extensioneditor" />
+    <group
+       id="trace"
+       state="1"
+       panel_size="1"
+       panel_ratio="100"
+       panel_mode="1"
+       panel_wrap="0"
+       x="0"
+       y="34"
+       w="1434"
+       h="836" />
+    <group
+       id="script" />
+    <group
+       id="input" />
+    <group
+       id="colorpickerwindow" />
+    <group
+       id="undo-history"
+       panel_size="1"
+       panel_ratio="100"
+       panel_mode="1"
+       panel_wrap="0" />
+    <group
+       id="filtereffects" />
+  </group>
+  <group
+     id="printing">
+    <settings
+       id="ps" />
+    <group
+       id="debug"
+       add-label-comments="0" />
+  </group>
+  <group
+     id="options">
+    <group
+       id="mapalt"
+       value="1" />
+    <group
+       id="useextinput"
+       value="1" />
+    <group
+       id="nudgedistance"
+       value="2" />
+    <group
+       id="rotationsnapsperpi"
+       value="12" />
+    <group
+       id="cursortolerance"
+       value="8.0" />
+    <group
+       id="dragtolerance"
+       value="4.0" />
+    <group
+       id="displayprofile"
+       enable="0"
+       from_display="0"
+       intent="0"
+       uri="" />
+    <group
+       id="softproof"
+       enable="0"
+       intent="0"
+       gamutcolor="#808080"
+       gamutwarn="0"
+       bpc="0"
+       preserveblack="0"
+       uri="" />
+    <group
+       id="savewindowgeometry"
+       value="1" />
+    <group
+       id="defaultoffsetwidth"
+       value="2" />
+    <group
+       id="defaultscale"
+       value="2" />
+    <group
+       id="maxrecentdocuments"
+       value="36" />
+    <group
+       id="zoomincrement"
+       value="1.414213562" />
+    <group
+       id="keyscroll"
+       value="10" />
+    <group
+       id="wheelscroll"
+       value="40" />
+    <group
+       id="spacepans"
+       value="0" />
+    <group
+       id="wheelzooms"
+       value="0" />
+    <group
+       id="transientpolicy"
+       value="1" />
+    <group
+       id="scrollingacceleration"
+       value="0.35" />
+    <group
+       id="autoscrollspeed"
+       value="0.7" />
+    <group
+       id="autoscrolldistance"
+       value="-10" />
+    <group
+       id="simplifythreshold"
+       value="0.002" />
+    <group
+       id="bitmapoversample"
+       value="1" />
+    <group
+       id="dialogtype"
+       value="1" />
+    <group
+       id="dock"
+       cancenterdock="1"
+       dockbarstyle="2"
+       switcherstyle="2" />
+    <group
+       id="dialogsskiptaskbar"
+       value="1" />
+    <group
+       id="arenatilescachesize"
+       value="8192" />
+    <group
+       id="preservetransform"
+       value="0" />
+    <group
+       id="clonecompensation"
+       value="1" />
+    <group
+       id="cloneorphans"
+       value="0" />
+    <group
+       id="stickyzoom"
+       value="0" />
+    <group
+       id="selcue"
+       value="2" />
+    <group
+       id="transform"
+       stroke="1"
+       rectcorners="1"
+       pattern="1"
+       gradient="1" />
+    <group
+       id="kbselection"
+       inlayer="1"
+       onlyvisible="1"
+       onlysensitive="1" />
+    <group
+       id="selection"
+       layerdeselect="1" />
+    <group
+       id="createbitmap" />
+    <group
+       id="compassangledisplay"
+       value="0" />
+    <group
+       id="maskobject"
+       topmost="1"
+       remove="1" />
+    <group
+       id="blurquality"
+       value="0" />
+    <group
+       id="showfiltersinfobox"
+       value="1" />
+    <group
+       id="startmode"
+       outline="0" />
+    <group
+       id="outlinemode"
+       value="0" />
+    <group
+       id="ocalurl"
+       str="openclipart.org" />
+    <group
+       id="ocalusername"
+       str="" />
+    <group
+       id="ocalpassword"
+       str="" />
+    <group
+       id="wireframecolors"
+       onlight="255"
+       ondark="4294967295"
+       images="4278190335"
+       clips="16711935"
+       masks="65535" />
+    <group
+       id="svgoutput"
+       usenamedcolors="0"
+       numericprecision="8"
+       minimumexponent="-8"
+       inlineattrs="0"
+       indent="2" />
+    <group
+       id="forkgradientvectors"
+       value="1" />
+    <group
+       id="grids"
+       no_emphasize_when_zoomedout="0">
+      <group
+         id="xy"
+         units="px"
+         origin_x="0.0"
+         origin_y="0.0"
+         spacing_x="1.0"
+         spacing_y="1.0"
+         color="65312"
+         empcolor="65344"
+         empspacing="5"
+         dotted="0" />
+      <group
+         id="axonom"
+         units="mm"
+         origin_x="0.0"
+         origin_y="0.0"
+         spacing_y="1.0"
+         angle_x="30.0"
+         angle_z="30.0"
+         color="65312"
+         empcolor="65344"
+         empspacing="5" />
+    </group>
+    <group
+       value="1"
+       id="importbitmapsasimages" />
+  </group>
+  <group
+     id="extensions"
+     org.inkscape.effect.bluredge.blur-width="6.4000001"
+     org.inkscape.effect.bluredge.num-steps="12"
+     org.inkscape.effect.bluredge.__live_effect__="0" />
+  <group
+     id="desktop"
+     style="fill:#ce3b59;fill-opacity:0.58487707;opacity:1">
+    <group
+       width="1430"
+       height="837"
+       x="0"
+       y="34"
+       fullscreen="0"
+       id="geometry"
+       maximized="1" />
+    <group
+       id="XYfront" />
+    <group
+       id="XYrear" />
+    <group
+       id="XZtop" />
+    <group
+       id="XZbottom" />
+    <group
+       id="YZleft" />
+    <group
+       id="YZright" />
+  </group>
+  <group
+     id="devices">
+    <group
+       keys=""
+       axes="x;y;"
+       mode="disabled"
+       id="Configured Mouse" />
+    <group
+       keys=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+       axes="x;y;pressure;xtilt;ytilt;wheel;"
+       mode="screen"
+       id="stylus" />
+    <group
+       keys=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+       axes="x;y;pressure;xtilt;ytilt;wheel;"
+       mode="screen"
+       id="cursor" />
+    <group
+       keys=";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+       axes="x;y;pressure;xtilt;ytilt;wheel;"
+       mode="screen"
+       id="eraser" />
+    <group
+       keys=""
+       axes="x;y;"
+       mode="disabled"
+       id="Synaptics Touchpad" />
+    <group
+       keys=""
+       axes="x;y;"
+       mode="disabled"
+       id="AlpsPS/2 ALPS GlidePoint" />
+    <group
+       keys=""
+       axes="x;y;"
+       mode="disabled"
+       id="PS/2 Mouse" />
+    <group
+       keys=""
+       axes="x;y;"
+       mode="disabled"
+       id="Macintosh mouse button emulation" />
+    <group
+       keys=""
+       axes="x;y;"
+       mode="screen"
+       id="Core Pointer" />
+  </group>
+  <group
+     id="toolbox"
+     icononly="1"
+     small="1">
+    <group
+       id="tools"
+       icononly="1"
+       small="0" />
+  </group>
+  <group
+     id="iconpreview">
+    <group
+       id="sizes">
+      <group
+         id="default">
+        <group
+           value="16"
+           show="1"
+           id="size16" />
+        <group
+           value="24"
+           show="1"
+           id="size24" />
+        <group
+           value="32"
+           show="1"
+           id="size32" />
+        <group
+           value="48"
+           show="1"
+           id="size48" />
+        <group
+           value="50"
+           show="0"
+           id="size50" />
+        <group
+           value="64"
+           show="0"
+           id="size64" />
+        <group
+           value="72"
+           show="0"
+           id="size72" />
+        <group
+           value="80"
+           show="0"
+           id="size80" />
+        <group
+           value="96"
+           show="0"
+           id="size96" />
+        <group
+           value="128"
+           show="1"
+           id="size128" />
+        <group
+           value="256"
+           show="0"
+           id="size256" />
+      </group>
+    </group>
+  </group>
+  <group
+     id="whiteboard">
+    <group
+       id="server"
+       name="jabber.org"
+       port="5222"
+       username=""
+       ssl="0" />
+    <group
+       id="room"
+       name="inkboard"
+       server="gristle.org" />
+  </group>
+</inkscape>
