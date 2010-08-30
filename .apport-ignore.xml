@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<apport>
+  <ignore mtime="1196704672" program="/usr/bin/deluge"/>
+  <ignore mtime="1213110356" program="/usr/lib/firefox-3.0/firefox"/>
+</apport>

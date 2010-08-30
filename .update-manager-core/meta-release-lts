@@ -1,0 +1,21 @@
+Dist: dapper
+Name: Dapper Drake
+Version: 6.06 LTS
+Date: Thu, 01 Jun 2006 9:00:00 UTC
+Supported: 1
+Description: This is the Dapper Drake release
+Release-File: http://archive.ubuntu.com/ubuntu/dists/dapper/Release
+ReleaseNotes: http://changelogs.ubuntu.com/DapperReleaseAnnouncement
+UpgradeTool: http://archive.ubuntu.com/ubuntu/dists/dapper/main/dist-upgrader-all/current/dapper.tar.gz
+UpgradeToolSignature: http://archive.ubuntu.com/ubuntu/dists/dapper/main/dist-upgrader-all/current/dapper.tar.gz.gpg
+
+Dist: hardy 
+Name: Hardy Heron
+Version: 8.04.1 LTS
+Date: Thu, 24 Apr 2008 12:00:00 UTC
+Supported: 1
+Description: This is the 8.04.1 LTS release
+Release-File: http://archive.ubuntu.com/ubuntu/dists/hardy/Release
+ReleaseNotes: http://archive.ubuntu.com/ubuntu/dists/hardy-proposed/main/dist-upgrader-all/0.87.27/ReleaseAnnouncement
+UpgradeTool: http://archive.ubuntu.com/ubuntu/dists/hardy-proposed/main/dist-upgrader-all/0.87.27/hardy.tar.gz
+UpgradeToolSignature: http://archive.ubuntu.com/ubuntu/dists/hardy-proposed/main/dist-upgrader-all/0.87.27/hardy.tar.gz.gpg
