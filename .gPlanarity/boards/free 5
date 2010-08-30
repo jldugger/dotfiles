@@ -1,0 +1,80 @@
+scoring 427 1.500000 4.000000 33 = 0
+board 1439 841 800 600
+vertex 400 30 846 473 0
+vertex 449 49 488 579 0
+vertex 489 89 808 209 0
+vertex 529 129 848 249 0
+vertex 570 170 889 290 0
+vertex 610 210 929 330 0
+vertex 650 250 969 370 0
+vertex 670 300 989 420 0
+vertex 650 349 969 469 0
+vertex 610 389 929 509 0
+vertex 570 429 889 549 0
+vertex 529 470 848 590 0
+vertex 489 510 808 630 0
+vertex 449 550 697 597 0
+vertex 400 570 719 690 0
+vertex 350 550 669 670 0
+vertex 310 510 629 630 0
+vertex 270 470 589 590 0
+vertex 229 429 548 549 0
+vertex 189 389 508 509 0
+vertex 149 349 468 469 0
+vertex 130 300 449 420 0
+vertex 149 250 468 370 0
+vertex 189 210 508 330 0
+vertex 229 170 615 379 0
+vertex 270 129 550 301 0
+vertex 310 89 629 209 0
+vertex 350 49 638 363 0
+edge 9 2
+edge 13 0
+edge 23 13
+edge 2 18
+edge 7 17
+edge 13 20
+edge 26 20
+edge 10 23
+edge 14 19
+edge 20 24
+edge 27 24
+edge 20 6
+edge 22 10
+edge 24 25
+edge 5 3
+edge 23 19
+edge 26 3
+edge 0 7
+edge 5 10
+edge 15 24
+edge 8 2
+edge 11 19
+edge 21 1
+edge 5 19
+edge 23 22
+edge 22 13
+edge 0 9
+edge 9 7
+edge 7 2
+edge 8 18
+edge 18 1
+edge 21 4
+edge 4 16
+edge 26 6
+edge 6 12
+edge 15 25
+edge 25 12
+edge 12 24
+edge 24 16
+edge 16 1
+edge 1 2
+edge 2 17
+edge 17 27
+edge 27 13
+edge 11 14
+edge 14 13
+edge 13 19
+edge 19 10
+edge 10 20
+edge 20 3

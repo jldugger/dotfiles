@@ -1,0 +1,16 @@
+current 6 : free 5
+level 4 0 8 : simple 1
+level 49 0 8 : simple 2
+level 162 0 6 : data 0
+level 99 0 8 : simple 3
+level 505 0 7 : crest 5
+level 247 0 8 : simple 4
+level 558 0 8 : simple 5
+level 1073 0 8 : simple 6
+level 328 0 8 : sparse 4
+level 229 0 8 : sparse 5
+level 291 0 7 : nasty 4
+level 829 0 7 : nasty 5
+level 1882 0 7 : nasty 6
+level 218 0 6 : free 4
+level 0 1 6 : free 5

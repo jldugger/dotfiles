@@ -1,0 +1,32 @@
+$fullscreen = 1;
+$graphics_level = 3;
+$mynick = 'jldugger';
+$KEYS = {
+          'p2' => {
+                    'left' => SDLK_x,
+                    'right' => SDLK_v,
+                    'fire' => SDLK_c,
+                    'center' => SDLK_d
+                  },
+          'p1' => {
+                    'left' => SDLK_LEFT,
+                    'right' => SDLK_RIGHT,
+                    'fire' => SDLK_UP,
+                    'center' => SDLK_DOWN
+                  },
+          'misc' => {
+                      'toggle_music' => SDLK_F11,
+                      'send_malus_to_rp1' => SDLK_F1,
+                      'send_malus_to_rp2' => SDLK_F2,
+                      'chat' => SDLK_RETURN,
+                      'lower_volume' => SDLK_KP_MINUS,
+                      'send_malus_to_rp3' => SDLK_F3,
+                      'send_malus_to_all' => SDLK_F10,
+                      'send_malus_to_rp4' => SDLK_F4,
+                      'next_playlist_elem' => SDLK_TAB,
+                      'toggle_sound' => SDLK_F12,
+                      'fs' => SDLK_f,
+                      'save_record' => SDLK_PRINT,
+                      'raise_volume' => SDLK_KP_PLUS
+                    }
+        };
