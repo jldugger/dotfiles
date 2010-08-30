@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats>
+  <player name="pwnguin" since="19:08 2006-09-19">
+    <stat tag="playtime" v="968.452759"/>
+    <stat tag="xmotostarts" v="1"/>
+    <stat tag="played" v="38"/>
+    <stat tag="diffplayed" v="6"/>
+    <stat tag="died" v="34"/>
+    <stat tag="restarts" v="0"/>
+    <stat tag="completed" v="4"/>
+    <level id="_iL00_" name="#1 Over or under">
+      <stat tag="played" v="2"/>
+      <stat tag="died" v="1"/>
+      <stat tag="completed" v="1"/>
+      <stat tag="playtime" v="39.250710"/>
+      <stat tag="restarts" v="0"/>
+    </level>
+    <level id="_iL01_" name="#2 Max Power">
+      <stat tag="played" v="11"/>
+      <stat tag="died" v="11"/>
+      <stat tag="completed" v="0"/>
+      <stat tag="playtime" v="93.591118"/>
+      <stat tag="restarts" v="0"/>
+    </level>
+    <level id="_iL02_" name="#3 Hillclimbing">
+      <stat tag="played" v="15"/>
+      <stat tag="died" v="14"/>
+      <stat tag="completed" v="1"/>
+      <stat tag="playtime" v="683.908447"/>
+      <stat tag="restarts" v="0"/>
+    </level>
+    <level id="_iL03_" name="#4 Paxed Alpha">
+      <stat tag="played" v="4"/>
+      <stat tag="died" v="3"/>
+      <stat tag="completed" v="1"/>
+      <stat tag="playtime" v="55.890900"/>
+      <stat tag="restarts" v="0"/>
+    </level>
+    <level id="_iL04_" name="#5 Paxed Bravo">
+      <stat tag="played" v="2"/>
+      <stat tag="died" v="1"/>
+      <stat tag="completed" v="1"/>
+      <stat tag="playtime" v="30.340504"/>
+      <stat tag="restarts" v="0"/>
+    </level>
+    <level id="_iL05_" name="#6 Paxed Charlie">
+      <stat tag="played" v="4"/>
+      <stat tag="died" v="4"/>
+      <stat tag="completed" v="0"/>
+      <stat tag="playtime" v="65.471115"/>
+      <stat tag="restarts" v="0"/>
+    </level>
+  </player>
+</stats>
