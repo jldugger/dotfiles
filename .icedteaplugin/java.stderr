@@ -1,4 +1,0 @@
-Exception in thread "Thread-7" java.lang.NullPointerException
-	at sun.applet.AppletPanel.showAppletStatus(AppletPanel.java:947)
-	at sun.applet.AppletPanel.run(AppletPanel.java:607)
-	at java.lang.Thread.run(Thread.java:636)
