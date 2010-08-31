@@ -9,7 +9,7 @@ ui urwid
 # offline setting - comment out to be online
 #offline
 # name and email setting (if non-default)
-# realname "Justin Dugger"
+realname "Justin Dugger"
 email "jldugger@ubuntu.com"
 # Disable fallback mode by commenting out the following:
 no-cc
