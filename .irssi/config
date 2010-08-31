@@ -1,0 +1,340 @@
+servers = (
+  {
+    address = "irc.oftc.net";
+    port = "0";
+    password = "oftc";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.freenode.net";
+    chatnet = "freenode";
+    port = "7000";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  }
+);
+
+chatnets = {
+  EFNet = {
+    type = "IRC";
+    max_kicks = "4";
+    max_modes = "4";
+    max_msgs = "3";
+    max_whois = "1";
+  };
+  freenode = {
+    type = "IRC";
+    max_kicks = "4";
+    max_msgs = "1";
+    max_modes = "4";
+    max_whois = "1";
+  };
+  oftc = {
+    type = "IRC";
+    max_kicks = "4";
+    max_msgs = "1";
+    max_modes = "4";
+    max_whois = "1";
+  };
+};
+
+channels = (
+  { name = "#k-slug"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#kclug"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#jccc"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#ubuntu-devel"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#ubuntu-arm"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#maemo"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#linode"; chatnet = "oftc"; autojoin = "yes"; },
+  { name = "#ubuntu-us-ks"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#linode-us-central"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#davical"; chatnet = "oftc"; autojoin = "yes"; },);
+
+aliases = {
+  J = "join";
+  WJOIN = "join -window";
+  WQUERY = "query -window";
+  LEAVE = "part";
+  BYE = "quit";
+  EXIT = "quit";
+  SIGNOFF = "quit";
+  DESCRIBE = "action";
+  DATE = "time";
+  HOST = "userhost";
+  LAST = "lastlog";
+  SAY = "msg *";
+  WI = "whois";
+  WII = "whois $0 $0";
+  WW = "whowas";
+  W = "who";
+  N = "names";
+  M = "msg";
+  T = "topic";
+  C = "clear";
+  CL = "clear";
+  K = "kick";
+  KB = "kickban";
+  KN = "knockout";
+  BANS = "ban";
+  B = "ban";
+  MUB = "unban *";
+  UB = "unban";
+  IG = "ignore";
+  UNIG = "unignore";
+  SB = "scrollback";
+  UMODE = "mode $N";
+  WC = "window close";
+  WN = "window new hide";
+  SV = "say Irssi $J ($V) - http://irssi.org/";
+  GOTO = "sb goto";
+  CHAT = "dcc chat";
+  RUN = "SCRIPT LOAD";
+  UPTIME = "eval exec - expr `date +%s` - \\$F | awk '{print \"Irssi uptime: \"int(\\\\\\$1/3600/24)\"d \"int(\\\\\\$1/3600%24)\"h \"int(\\\\\\$1/60%60)\"m \"int(\\\\\\$1%60)\"s\" }'";
+  CALC = "exec - if which bc &>/dev/null\\; then echo '$*' | bc | awk '{print \"$*=\"$$1}'\\; else echo bc was not found\\; fi";
+  SBAR = "STATUSBAR";
+  INVITELIST = "mode $C +I";
+  Q = "QUERY";
+};
+
+statusbar = {
+
+  items = {
+    # start/end text in statusbars
+    barstart = "{sbstart}";
+    barend = "{sbend}";
+
+    topicbarstart = "{topicsbstart}";
+    topicbarend = "{topicsbend}";
+
+    time = "{sb $Z}";
+    user = "{sb {sbnickmode $cumode}$N{sbmode $usermode}{sbaway $A}}";
+
+    window = "{sb $winref:$itemname{sbmode $M}}";
+    window_empty = "{sb $winref{sbservertag $tag}}";
+    prompt = "{prompt $[.15]itemname}";
+    prompt_empty = "{prompt $winname}";
+    topic = " $topic";
+    topic_empty = " Irssi v$J - http://irssi.org/help/";
+
+
+    lag = "{sb Lag: $0-}";
+    act = "{sb Act: $0-}";
+    more = "-- more --";
+  };
+  default = {
+    window = {
+      disabled = "no";
+
+      type = "window";
+
+      placement = "bottom";
+
+      position = "1";
+
+      visible = "active";
+
+      items = {
+        barstart = { priority = "100"; };
+        time = { };
+        user = { };
+        window = { };
+        window_empty = { };
+        lag = { priority = "-1"; };
+        act = { priority = "10"; };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+
+    window_inact = {
+      type = "window";
+      placement = "bottom";
+      position = "1";
+      visible = "inactive";
+      items = {
+        barstart = { priority = "100"; };
+        window = { };
+        window_empty = { };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+
+    prompt = {
+      type = "root";
+      placement = "bottom";
+      # we want to be at the bottom always
+      position = "100";
+      visible = "always";
+      items = {
+        prompt = { priority = "-1"; };
+        prompt_empty = { priority = "-1"; };
+        # treated specially, this is the real input line.
+        input = { priority = "10"; };
+      };
+    };
+
+    # topicbar
+    topic = {
+      type = "root";
+      placement = "top";
+      position = "1";
+      visible = "always";
+      items = {
+        topicbarstart = { priority = "100"; };
+        topic = { };
+        topic_empty = { };
+        topicbarend = { priority = "100"; alignment = "right"; };
+      };
+    };
+  };
+};
+settings = {
+  core = {
+    real_name = "Justin L Dugger";
+    user_name = "jldugger";
+    nick = "pwnguin";
+    rawlog_lines = "50";
+  };
+  "fe-common/core" = {
+    theme = "default";
+    autolog = "yes";
+    term_charset = "UTF-8";
+    activity_hide_targets = "#ubuntu-motu ";
+    activity_hide_level = "JOINS PARTS QUITS NICKS";
+    completion_keep_privates = "5";
+    completion_keep_publics = "25";
+    max_command_history = "50";
+    autoclose_query = "30";
+    use_status_window = "yes";
+  };
+  "fe-text" = {
+    actlist_sort = "refnum";
+    scrollback_lines = "200";
+    scrollback_time = "16hours";
+  };
+  "irc/core" = { alternate_nick = "jldugger"; };
+};
+
+ignores = (
+  { level = "JOINS PARTS QUITS"; channels = ( "#ubuntu+1" ); },
+  { mask = "luke-jr"; level = "ALL"; },
+  { mask = "luke-jr_"; level = "ALL"; },
+  { mask = "ljrbot"; level = "ALL"; },
+  { mask = "CHANFIX"; level = "ALL"; },
+  { level = "JOINS PARTS QUITS"; channels = ( "#ubuntu-us-ks" ); },
+  { level = "JOINS PARTS QUITS"; channels = ( "#sparkfun" ); },
+  { mask = "*!*@*"; level = "CTCPS"; }
+);
+
+logs = { "#k-slug" = { level = "ALL"; }; };
+
+hilights = (
+  { text = "dugger"; nick = "yes"; word = "yes"; },
+  {
+    text = ".*";
+    nick = "yes";
+    word = "yes";
+    regexp = "yes";
+    channels = ( "#ubuntu-us-ks" );
+  },
+  { text = ".* #jccc -regexp"; nick = "yes"; word = "yes"; },
+  { text = ".* #davical -regexp"; nick = "yes"; word = "yes"; }
+);
+windows = {
+  1 = { };
+  2 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#k-slug";
+        tag = "freenode";
+      }
+    );
+  };
+  3 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#kclug";
+        tag = "freenode";
+      }
+    );
+  };
+  4 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#jccc";
+        tag = "oftc";
+      }
+    );
+  };
+  5 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-devel";
+        tag = "freenode";
+      }
+    );
+  };
+  6 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-arm";
+        tag = "freenode";
+      }
+    );
+  };
+  7 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#maemo";
+        tag = "freenode";
+      }
+    );
+  };
+  8 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#linode";
+        tag = "oftc";
+      }
+    );
+  };
+  9 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-us-central";
+        tag = "freenode";
+      }
+    );
+  };
+  10 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-us-ks";
+        tag = "freenode";
+      }
+    );
+  };
+};
+mainwindows = { 2 = { first_line = "1"; lines = "63"; }; };
