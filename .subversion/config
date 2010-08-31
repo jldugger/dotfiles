@@ -54,7 +54,7 @@ editor-cmd = emacs
 ### Set diff-cmd to the absolute path of your 'diff' program.
 ###   This will override the compile-time default, which is to use
 ###   Subversion's internal diff implementation.
-# diff-cmd = diff_program (diff, gdiff, etc.)
+diff-cmd = colordiff
 ### Set diff3-cmd to the absolute path of your 'diff3' program.
 ###   This will override the compile-time default, which is to use
 ###   Subversion's internal diff3 implementation.

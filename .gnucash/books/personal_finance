@@ -4,9 +4,9 @@ BookGuid=20bcdc851b7b32f5928250a885eedeb4
 WindowCount=1
 
 [Window 1]
-PageCount=2
+PageCount=1
 FirstPage=1
-PageOrder=2;1;
+PageOrder=1;
 WindowPosition=881;24;
 WindowGeometry=1037;1144;
 WindowMaximized=false
@@ -20,21 +20,12 @@ PageName=Accounts
 AccountTypes=-1
 ShowHidden=false
 ShowZeroTotal=true
-SelectedAccount=Expenses:Auto:Gas
 OpenAccount1=Assets
-OpenAccount2=Assets:Liquid Assets
+OpenAccount2=Equity
 OpenAccount3=Expenses
-OpenAccount4=Expenses:Auto
-OpenAccount5=Expenses:Computer
-OpenAccount6=Expenses:Interest
+OpenAccount4=Expenses:Computer
+OpenAccount5=Expenses:Entertainment
+OpenAccount6=Expenses:Utilities
 OpenAccount7=Liabilities
 OpenAccount8=Liabilities:Loans
 NumberOfOpenAccounts=8
-
-[Page 2]
-PageType=GncPluginPageRegister
-PageName=Gas
-RegisterType=Account
-AccountName=Expenses:Auto:Gas
-RegisterStyle=Ledger
-DoubleLineMode=false
