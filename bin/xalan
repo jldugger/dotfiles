@@ -1,0 +1,11 @@
+#!/bin/sh
+# Command line wrapper for running xalan.
+# Written by Ola Lundqvist <opal@debian.org> for fop package
+# Modified by Pierre Thierry <pierre.thierry@moine-fou.org>
+
+JAVASH=/usr/share/java
+
+export CLASSPATH=$JAVASH/xalan2.jar:$JAVASH/xerces.jar:$JAVASH/logkit.jar:$JAVASH/avalon-framework.jar:$JAVASH/jimi-1.0.jar:$CLASSPATH
+
+exec java $JAVA_OPTS org.apache.xalan.xslt.Process "$@"
+

@@ -1,0 +1,27 @@
+[search]
+load = 1
+
+[template]
+load = 1
+
+[schemabrowser]
+load = 1
+
+[Addressbook]
+filter = mail,givenName,cn,sn,uid
+
+[addressbook]
+load = 1
+
+[usermanagement]
+load = 1
+
+[adminutils]
+load = 1
+
+[massiveusercreation]
+load = 1
+
+[browser]
+load = 1
+
