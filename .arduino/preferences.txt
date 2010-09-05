@@ -54,6 +54,7 @@ editor.keys.shift_backspace_is_delete=true
 editor.window.height.min.macosx=450
 last.sketch.count=0
 export.delete_target_folder=true
+last.sketch0.path=
 preproc.substitute_floats=true
 editor.keys.alternative_cut_copy_paste.macosx=false
 browser.linux=mozilla
