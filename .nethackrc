@@ -1,0 +1,13 @@
+OPTIONS=color,hilite_pet,lit_corridor,menucolors,DECgraphics
+OPTIONS=autopickup
+OPTIONS=role:Val,race:Human
+OPTIONS=number_pad:1
+
+
+# Borrowed from http://frontloadtoaster.blogspot.com/2008/03/nethackrc-and-you.html
+#----------MENU COLORS----------
+MENUCOLOR="[Cc]ursed"=orange&bold&underline
+MENUCOLOR="[Uu]ncursed"=yellow
+MENUCOLOR="[Bb]lessed"=lightgreen
+MENUCOLOR="-[0-9]"=orange
+#-------------------------------
