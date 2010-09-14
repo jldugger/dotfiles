@@ -90,7 +90,7 @@ fi
 #alias l='ls -CF'
 alias diff='diff -Naur'
 alias df='df -h'
-
+alias youtube-dl='youtube-dl -l'
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
