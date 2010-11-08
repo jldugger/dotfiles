@@ -1,2 +1,3 @@
+vbell off
 startup_message off
 termcapinfo xterm|xterms|xs|rxvt ti@:te@
