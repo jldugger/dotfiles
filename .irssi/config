@@ -1,6 +1,14 @@
 servers = (
   {
+    address = "irc.freenode.net";
+    chatnet = "freenode";
+    port = "8001";
+    autoconnect = "yes";
+  },
+  { address = "irc.gnome.org"; chatnet = "GIMPNet"; port = "6667"; },
+  {
     address = "irc.oftc.net";
+    chatnet = "oftc";
     port = "0";
     password = "oftc";
     use_ssl = "no";
@@ -8,10 +16,10 @@ servers = (
     autoconnect = "yes";
   },
   {
-    address = "irc.freenode.net";
-    chatnet = "freenode";
-    port = "7000";
-    use_ssl = "yes";
+    address = "irc.slashnet.org";
+    chatnet = "slashnet";
+    port = "0";
+    use_ssl = "no";
     ssl_verify = "no";
     autoconnect = "yes";
   }
@@ -25,8 +33,16 @@ chatnets = {
     max_msgs = "3";
     max_whois = "1";
   };
+  Undernet = {
+    type = "IRC";
+    max_kicks = "4";
+    max_modes = "3";
+    max_msgs = "3";
+    max_whois = "30";
+  };
   freenode = {
     type = "IRC";
+    autosendcmd = "^msg nickserv identify tripod; wait 2000";
     max_kicks = "4";
     max_msgs = "1";
     max_modes = "4";
@@ -35,23 +51,31 @@ chatnets = {
   oftc = {
     type = "IRC";
     max_kicks = "4";
+    max_modes = "4";
+    max_msgs = "3";
+    max_whois = "1";
+  };
+  slashnet = {
+    type = "IRC";
+    max_kicks = "4";
     max_msgs = "1";
     max_modes = "4";
     max_whois = "1";
   };
+  GIMPNet = { type = "IRC"; };
 };
 
 channels = (
   { name = "#k-slug"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#kclug"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#jccc"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#ksu"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#ubuntu-devel"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#ubuntu-arm"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#maemo"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#linode"; chatnet = "oftc"; autojoin = "yes"; },
-  { name = "#ubuntu-us-ks"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#linode-us-central"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#davical"; chatnet = "oftc"; autojoin = "yes"; },);
+  { name = "#linode"; chatnet = "oftc"; autojoin = "yes"; }
+  { name = "ubuntu-us-ks"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "kulua" chatnet = "slashnet"; autojoin = "yes";}
+
+);
 
 aliases = {
   J = "join";
@@ -227,7 +251,15 @@ ignores = (
   { mask = "CHANFIX"; level = "ALL"; },
   { level = "JOINS PARTS QUITS"; channels = ( "#ubuntu-us-ks" ); },
   { level = "JOINS PARTS QUITS"; channels = ( "#sparkfun" ); },
-  { mask = "*!*@*"; level = "CTCPS"; }
+  { mask = "lsk"; level = "ALL"; },
+  { mask = "kehklddyhuen"; level = "ALL"; },
+  { mask = "yks"; level = "ALL"; },
+  { mask = "egho"; level = "ALL"; },
+  { mask = "eqc"; level = "ALL"; },
+  { mask = "*!*@*"; level = "CTCPS"; },
+  { level = "JOINS PARTS QUITS"; channels = ( "#kulua" ); },
+  { level = "JOINS PARTS QUITS"; channels = ( "#devops" ); },
+  { level = "JOINS PARTS QUITS"; channels = ( "#infra-talk" ); }
 );
 
 logs = { "#k-slug" = { level = "ALL"; }; };
@@ -271,8 +303,8 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#jccc";
-        tag = "oftc";
+        name = "#ksu";
+        tag = "freenode";
       }
     );
   };
@@ -301,32 +333,12 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#maemo";
-        tag = "freenode";
-      }
-    );
-  };
-  8 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
         name = "#linode";
         tag = "oftc";
       }
     );
   };
-  9 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#ubuntu-us-central";
-        tag = "freenode";
-      }
-    );
-  };
-  10 = {
+  8 = {
     items = (
       {
         type = "CHANNEL";
@@ -336,5 +348,26 @@ windows = {
       }
     );
   };
+  9 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-motu";
+        tag = "freenode";
+      }
+    );
+  };
+  10 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#kulua";
+        tag = "slashnet";
+      }
+    );
+  };
+
 };
 mainwindows = { 2 = { first_line = "1"; lines = "63"; }; };
