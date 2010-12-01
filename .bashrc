@@ -102,9 +102,7 @@ fi
 export PATH=~/bin:"${PATH}"
 
 #set up classpath
-#export CLASSPATH=/usr/share/java/xalan2.jar
-
 export JAVA_HOME=/usr/lib/jvm/java-6-openjdk/
-
+export MAVEN_OPTS=-XX:MaxPermSize=256m
 #faster cluster management (use -w to override)
 alias dsh='dsh -c -M'

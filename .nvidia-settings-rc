@@ -2,7 +2,7 @@
 # /home/jldugger/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Sun Jul 11 14:57:50 2010
+# Generated on Mon Nov 22 09:18:24 2010
 #
 
 # ConfigProperties:
@@ -13,6 +13,8 @@ DisplayStatusBar = Yes
 SliderTextEntries = Yes
 IncludeDisplayNameInConfigFile = No
 ShowQuitDialog = No
+Timer = Thermal_Monitor_(GPU_0),Yes,1000
+Timer = Graphics_Card_(GPU_0),Yes,1000
 Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
 
 # Attributes:
@@ -41,8 +43,11 @@ Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
 0/RedGamma=1.000000
 0/GreenGamma=1.000000
 0/BlueGamma=1.000000
-0/DigitalVibrance[CRT-0]=0
-0/ImageSharpening[CRT-0]=0
+0/DigitalVibrance[DFP-0]=0
+0/ImageSharpening[DFP-0]=0
+0/GPUScaling[DFP-0]=65537
+0/ColorSpace[DFP-0]=0
+0/ColorRange[DFP-0]=0
 0/XVideoTextureSyncToVBlank=1
 0/XVideoBlitterSyncToVBlank=0
-0/XVideoSyncToDisplay=1
+0/XVideoSyncToDisplay=65536
