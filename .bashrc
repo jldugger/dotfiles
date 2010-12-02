@@ -101,8 +101,12 @@ fi
 # set PATH to include private bin
 export PATH=~/bin:"${PATH}"
 
-#set up classpath
+# set up classpath
 export JAVA_HOME=/usr/lib/jvm/java-6-openjdk/
 export MAVEN_OPTS=-XX:MaxPermSize=256m
-#faster cluster management (use -w to override)
+# faster cluster management (use -w to override)
 alias dsh='dsh -c -M'
+
+# debian ENV vars
+export DEBEMAIL="jldugger@gmail.com"
+export DEBFULLNAME="Justin Dugger"
