@@ -146,4 +146,4 @@ diff-cmd = colordiff
 # *.png = svn:mime-type=image/png
 # *.jpg = svn:mime-type=image/jpeg
 # Makefile = svn:eol-style=native
-
+*.php = svn:eol-style=native

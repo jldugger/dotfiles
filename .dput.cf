@@ -4,3 +4,10 @@ method = ftp
 incoming = ~jldugger/ubuntu/
 login = anonymous
 allow_unsigned_uploads = 0
+
+[limesurvey]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~jldugger/ppa/ubuntu/
+login = anonymous
+allow_unsigned_uploads = 0
