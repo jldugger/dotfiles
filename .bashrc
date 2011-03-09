@@ -102,11 +102,16 @@ fi
 export PATH=~/bin:"${PATH}"
 
 # set up classpath
-export JAVA_HOME=/usr/lib/jvm/java-6-openjdk/
+export JAVA_HOME=/usr/lib/jvm/java-1.5.0-sun
 export MAVEN_OPTS=-XX:MaxPermSize=256m
+
+# IDEA settings
+export IDEA_JDK=/usr/lib/jvm/java-6-sun
+
 # faster cluster management (use -w to override)
 alias dsh='dsh -c -M'
 
 # debian ENV vars
 export DEBEMAIL="jldugger@gmail.com"
 export DEBFULLNAME="Justin Dugger"
+export EDITOR=/usr/bin/emacs
