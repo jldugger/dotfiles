@@ -3,7 +3,7 @@
   <Global>
     <ExtraData>
       <ExtraDataItem name="GUI/LastVMSelected" value="954da2f2-e343-4a5c-9ef3-f9bef23c17d6"/>
-      <ExtraDataItem name="GUI/LastWindowPostion" value="253,165,770,550,max"/>
+      <ExtraDataItem name="GUI/LastWindowPostion" value="2853,96,770,550"/>
       <ExtraDataItem name="GUI/SuppressMessages" value=",remindAboutAutoCapture,remindAboutMouseIntegrationOn"/>
     </ExtraData>
     <MachineRegistry>
