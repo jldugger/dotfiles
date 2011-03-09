@@ -31,7 +31,7 @@ discard_corepointer=true
 # always map eraser tip to eraser (true/false)
 use_erasertip=true
 # default path for open/save (leave blank for current directory)
-default_path=/home/jldugger
+default_path=/home/jldugger/Desktop
 # interface components from top to bottom
 # valid values: drawarea menu main_toolbar pen_toolbar statusbar
 interface_order=menu main_toolbar pen_toolbar drawarea statusbar
