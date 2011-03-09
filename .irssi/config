@@ -71,9 +71,9 @@ channels = (
   { name = "#ksu"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#ubuntu-devel"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#ubuntu-arm"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#linode"; chatnet = "oftc"; autojoin = "yes"; }
-  { name = "ubuntu-us-ks"; chatnet = "freenode"; autojoin = "yes"; }
-  { name = "kulua" chatnet = "slashnet"; autojoin = "yes";}
+  { name = "#linode"; chatnet = "oftc"; autojoin = "yes"; },
+  { name = "ubuntu-us-ks"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "kulua"; chatnet = "slashnet"; autojoin = "yes"; },
 
 );
 
@@ -313,32 +313,12 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#ubuntu-devel";
-        tag = "freenode";
-      }
-    );
-  };
-  6 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#ubuntu-arm";
-        tag = "freenode";
-      }
-    );
-  };
-  7 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
         name = "#linode";
         tag = "oftc";
       }
     );
   };
-  8 = {
+  6 = {
     items = (
       {
         type = "CHANNEL";
@@ -348,17 +328,7 @@ windows = {
       }
     );
   };
-  9 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#ubuntu-motu";
-        tag = "freenode";
-      }
-    );
-  };
-  10 = {
+  7 = {
     items = (
       {
         type = "CHANNEL";
@@ -368,6 +338,15 @@ windows = {
       }
     );
   };
-
+  8 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "XMPP";
+        name = "ome@conference.jabber.ome.ksu.edu";
+        tag = "xmpp:jldugger@jabber.ome.ksu.edu";
+      }
+    );
+  };
 };
-mainwindows = { 2 = { first_line = "1"; lines = "63"; }; };
+mainwindows = { 8 = { first_line = "1"; lines = "53"; }; };
