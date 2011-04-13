@@ -1,0 +1,117 @@
+PostgreSQLPath=/usr/bin
+EnterpriseDBPath=
+GreenplumDBPath=
+PostgreSQLHelpPath=http://www.postgresql.org/docs/current/static/
+EnterpriseDBHelpPath=http://www.enterprisedb.com/docs/en/current/server/
+GreenplumDBHelpPath=http://www.greenplum.com/docs/3300/
+SlonyHelpPath=http://www.slony.info/documentation/
+LastDatabase=games
+LastPort=5432
+LastSSL=-1
+LastUsername=jldugger
+LogFile=/tmp/
+LogLevel=1
+AskSaveConfirmation=true
+ConfirmDelete=true
+ShowUsersForPrivileges=false
+AutoRowCount=2000
+IndentSpaces=0
+SpacesForTabs=false
+StickySql=true
+DoubleClickProperties=false
+WriteUnicodeFile=true
+Font=
+SuppressGuruHints=false
+SlonyPath=
+IgnoreVersion=false
+SystemSchemas=
+LanguageId=0
+[Hints]
+saving-passwords=Suppress
+instrumentation=Suppress
+[frmHint]
+Left=616
+Top=151
+Width=685
+Height=890
+[Properties]
+[Properties/Server]
+Left=178
+Top=36
+Width=495
+Height=638
+[Properties/Schema]
+Left=711
+Top=311
+Width=495
+Height=571
+[Servers]
+Count=1
+[Servers/1]
+Server=pwnguin.net
+Description=whee
+ServiceID=
+DiscoveryID=
+Port=5432
+StorePwd=true
+Restore=true
+Database=games
+Username=jldugger
+LastDatabase=postgres
+LastSchema=public
+DbRestriction=
+Colour=
+SSL=-1
+[Servers/1/Databases]
+[Servers/1/Databases/davical]
+SchemaRestriction=
+[Servers/1/Databases/django_tutorials]
+SchemaRestriction=
+[Servers/1/Databases/gallery2]
+SchemaRestriction=
+[Servers/1/Databases/games]
+SchemaRestriction=
+[Servers/1/Databases/limesurvey]
+SchemaRestriction=
+[Servers/1/Databases/postgres]
+SchemaRestriction=
+[frmMain]
+Perspective-=layout2|name=objectBrowser;caption=Object browser;state=16779260;dir=4;layer=1;row=0;pos=0;prop=100000;bestw=200;besth=450;minw=100;minh=200;maxw=-1;maxh=-1;floatx=236;floaty=222;floatw=-1;floath=-1|name=listViews;caption=Info pane;state=1020;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=400;besth=200;minw=200;minh=100;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=sqlPane;caption=SQL pane;state=16779260;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=400;besth=200;minw=200;minh=100;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=toolBar;caption=Tool bar;state=16788208;dir=1;layer=10;row=0;pos=0;prop=100000;bestw=586;besth=44;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=202|dock_size(3,0,0)=447|dock_size(1,10,0)=46|dock_size(4,1,0)=353|
+Left=0
+Top=24
+Width=1918
+Height=1145
+[Updates]
+pgsql-Versions=8.4
+UseSSL=true
+[frmQuery]
+MaxRows=100
+MaxColSize=256
+IndicateNull=false
+Font=monospace 12
+[Copy]
+Quote=Strings
+QuoteChar="\""
+ColSeparator=;
+[Display]
+Groups-login\ Roles=false
+Users-login\ Roles=false
+Public\ Synonyms=false
+Domains=false
+Trigger\ Functions=false
+Catalogs=false
+Tablespaces=false
+FTS\ Configurations=false
+FTS\ Dictionaries=false
+FTS\ Parsers=false
+FTS\ Templates=false
+[frmStatus]
+Perspective-=layout2|name=Activity;caption=Activity;state=6309884;dir=4;layer=0;row=0;pos=2;prop=100000;bestw=20;besth=20;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Locks;caption=Locks;state=6293500;dir=4;layer=0;row=0;pos=1;prop=100000;bestw=20;besth=20;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Transactions;caption=Transactions;state=6293500;dir=4;layer=0;row=0;pos=0;prop=100000;bestw=20;besth=20;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Logfile;caption=Logfile;state=6293500;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=20;besth=20;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=toolBar;caption=Tool bar;state=2108144;dir=1;layer=10;row=0;pos=0;prop=100000;bestw=720;besth=31;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(4,0,0)=549|dock_size(5,0,0)=22|dock_size(1,10,0)=33|
+Left=0
+Top=24
+Width=1920
+Height=1146
+RefreshStatusRate=10
+RefreshLockRate=10
+RefreshXactRate=10
+RefreshLogRate=0
