@@ -7,7 +7,7 @@
 # the display resolution, in pixels per inch
 display_dpi=96.00
 # the initial zoom level, in percent
-initial_zoom=100.00
+initial_zoom=150.00
 # maximize the window at startup (true/false)
 window_maximize=true
 # start in full screen mode (true/false)
@@ -31,7 +31,7 @@ discard_corepointer=true
 # always map eraser tip to eraser (true/false)
 use_erasertip=true
 # default path for open/save (leave blank for current directory)
-default_path=/home/jldugger/Desktop
+default_path=/home/jldugger/Desktop/puzzle
 # interface components from top to bottom
 # valid values: drawarea menu main_toolbar pen_toolbar statusbar
 interface_order=menu main_toolbar pen_toolbar drawarea statusbar
@@ -114,13 +114,13 @@ btn2_thickness=0
 # button 2 eraser mode (eraser only)
 btn2_erasermode=0
 # button 3 tool (pen, eraser, highlighter, text, selectrect, vertspace, hand)
-btn3_tool=highlighter
+btn3_tool=eraser
 # button 3 brush linked to primary brush (true/false) (overrides all other settings)
 btn3_linked=false
 # button 3 ruler mode (true/false) (for pen or highlighter only)
 btn3_ruler=false
 # button 3 brush color (for pen or highlighter only)
-btn3_color=yellow
+btn3_color=white
 # button 3 brush thickness (pen, eraser, or highlighter only)
 btn3_thickness=2
 # button 3 eraser mode (eraser only)

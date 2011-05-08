@@ -2,6 +2,9 @@
   (if template 
     (let ((options ((gnc:html-style-sheet-template-options-generator template)))) 
 
+; Section: Fonts
+
+
 ; Section: Images
 
 
@@ -17,6 +20,9 @@
 (let ((template (gnc:html-style-sheet-template-find "Easy")))
   (if template 
     (let ((options ((gnc:html-style-sheet-template-options-generator template)))) 
+
+; Section: Fonts
+
 
 ; Section: Images
 
@@ -34,9 +40,34 @@
   (if template 
     (let ((options ((gnc:html-style-sheet-template-options-generator template)))) 
 
+; Section: Fonts
+
+
 ; Section: Tables
 
 
 ; Section: General
 
+
+; Section: Colors
+
  (gnc:restore-html-style-sheet "Default" "Plain" options))))
+(let ((template (gnc:html-style-sheet-template-find "Footer")))
+  (if template 
+    (let ((options ((gnc:html-style-sheet-template-options-generator template)))) 
+
+; Section: Fonts
+
+
+; Section: Images
+
+
+; Section: Tables
+
+
+; Section: General
+
+
+; Section: Colors
+
+ (gnc:restore-html-style-sheet "Footer" "Footer" options))))
