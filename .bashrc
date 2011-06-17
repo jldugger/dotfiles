@@ -115,3 +115,6 @@ alias dsh='dsh -c -M'
 export DEBEMAIL="jldugger@gmail.com"
 export DEBFULLNAME="Justin Dugger"
 export EDITOR=/usr/bin/emacs
+
+# safety features
+alias mysql="mysql --safe-updates"
