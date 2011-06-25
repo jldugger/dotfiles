@@ -2,15 +2,15 @@ servers = (
   {
     address = "irc.freenode.net";
     chatnet = "freenode";
-    port = "8001";
+    port = "7000";
+    use_ssl = "ON";
     autoconnect = "yes";
   },
   { address = "irc.gnome.org"; chatnet = "GIMPNet"; port = "6667"; },
   {
-    address = "irc.oftc.net";
+    address = "irc6.oftc.net";
     chatnet = "oftc";
-    port = "0";
-    password = "oftc";
+    port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
     autoconnect = "yes";
@@ -22,10 +22,20 @@ servers = (
     use_ssl = "no";
     ssl_verify = "no";
     autoconnect = "yes";
+  },
+  {
+    address = "jabber.ome.ksu.edu";
+    port = "0";
+    chatnet = "ome";
+    autoconnect = "yes";
   }
 );
 
 chatnets = {
+  ome = {
+    type = "XMPP";
+    nick = "jldugger@jabber.ome.ksu.edu";
+  };
   EFNet = {
     type = "IRC";
     max_kicks = "4";
@@ -42,7 +52,6 @@ chatnets = {
   };
   freenode = {
     type = "IRC";
-    autosendcmd = "^msg nickserv identify tripod; wait 2000";
     max_kicks = "4";
     max_msgs = "1";
     max_modes = "4";
@@ -67,14 +76,13 @@ chatnets = {
 
 channels = (
   { name = "#k-slug"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "ome@conference.ome.ksu.edu"; chatnet = "ome"; autojoin = "yes";},
   { name = "#kclug"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#ksu"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#ubuntu-devel"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#ubuntu-arm"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#linode"; chatnet = "oftc"; autojoin = "yes"; },
-  { name = "ubuntu-us-ks"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "kulua"; chatnet = "slashnet"; autojoin = "yes"; },
-
+  { name = "#ubuntu-us-ks"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#kulua"; chatnet = "slashnet"; autojoin = "yes"; },
+  { name = "#pelican"; chatnet = "freenode"; autojoin = "yes"; },
 );
 
 aliases = {
@@ -221,13 +229,14 @@ settings = {
     real_name = "Justin L Dugger";
     user_name = "jldugger";
     nick = "pwnguin";
+    resolve_prefer_ipv6 = "ON";
     rawlog_lines = "50";
   };
   "fe-common/core" = {
     theme = "default";
     autolog = "yes";
     term_charset = "UTF-8";
-    activity_hide_targets = "#ubuntu-motu ";
+    activity_hide_targets = "#linode #ubuntu-motu";
     activity_hide_level = "JOINS PARTS QUITS NICKS";
     completion_keep_privates = "5";
     completion_keep_publics = "25";
@@ -245,21 +254,10 @@ settings = {
 
 ignores = (
   { level = "JOINS PARTS QUITS"; channels = ( "#ubuntu+1" ); },
-  { mask = "luke-jr"; level = "ALL"; },
   { mask = "luke-jr_"; level = "ALL"; },
   { mask = "ljrbot"; level = "ALL"; },
   { mask = "CHANFIX"; level = "ALL"; },
-  { level = "JOINS PARTS QUITS"; channels = ( "#ubuntu-us-ks" ); },
-  { level = "JOINS PARTS QUITS"; channels = ( "#sparkfun" ); },
-  { mask = "lsk"; level = "ALL"; },
-  { mask = "kehklddyhuen"; level = "ALL"; },
-  { mask = "yks"; level = "ALL"; },
-  { mask = "egho"; level = "ALL"; },
-  { mask = "eqc"; level = "ALL"; },
-  { mask = "*!*@*"; level = "CTCPS"; },
-  { level = "JOINS PARTS QUITS"; channels = ( "#kulua" ); },
-  { level = "JOINS PARTS QUITS"; channels = ( "#devops" ); },
-  { level = "JOINS PARTS QUITS"; channels = ( "#infra-talk" ); }
+  { level = "JOINS PARTS QUITS"; channels = ( "#ubuntu-us-ks" ); }
 );
 
 logs = { "#k-slug" = { level = "ALL"; }; };
@@ -348,5 +346,16 @@ windows = {
       }
     );
   };
+  9 = { name = "twitter"; };
+  10 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#pelican";
+        tag = "freenode";
+      }
+    );
+  };
 };
-mainwindows = { 8 = { first_line = "1"; lines = "53"; }; };
+mainwindows = { 8 = { first_line = "1"; lines = "54"; }; };
