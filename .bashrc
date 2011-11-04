@@ -118,3 +118,7 @@ export EDITOR=/usr/bin/emacs
 
 # safety features
 alias mysql="mysql --safe-updates"
+
+#CVS settings
+export CVSROOT=:ext:jldugger@cvs.ome.ksu.edu:/as/data/cvsroot
+export CVS_RSH=/usr/bin/ssh
