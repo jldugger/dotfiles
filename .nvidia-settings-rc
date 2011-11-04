@@ -2,7 +2,7 @@
 # /home/jldugger/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Tue Jan 18 14:22:46 2011
+# Generated on Mon May 16 10:52:58 2011
 #
 
 # ConfigProperties:
@@ -13,12 +13,12 @@ DisplayStatusBar = Yes
 SliderTextEntries = Yes
 IncludeDisplayNameInConfigFile = No
 ShowQuitDialog = No
-Timer = PowerMizer_Monitor_(GPU_1),Yes,1000
-Timer = Thermal_Monitor_(GPU_1),Yes,1000
-Timer = Graphics_Card_(GPU_1),Yes,1000
-Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
-Timer = Graphics_Card_(GPU_0),Yes,1000
 Timer = Thermal_Monitor_(GPU_0),Yes,1000
+Timer = Graphics_Card_(GPU_0),Yes,1000
+Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
+Timer = Graphics_Card_(GPU_1),Yes,1000
+Timer = Thermal_Monitor_(GPU_1),Yes,1000
+Timer = PowerMizer_Monitor_(GPU_1),Yes,1000
 
 # Attributes:
 
@@ -54,3 +54,67 @@ Timer = Thermal_Monitor_(GPU_0),Yes,1000
 0/XVideoTextureSyncToVBlank=1
 0/XVideoBlitterSyncToVBlank=0
 0/XVideoSyncToDisplay=131072
+1/CursorShadow=0
+1/CursorShadowAlpha=64
+1/CursorShadowRed=0
+1/CursorShadowGreen=0
+1/CursorShadowBlue=0
+1/CursorShadowXOffset=4
+1/CursorShadowYOffset=2
+1/SyncToVBlank=0
+1/LogAniso=0
+1/FSAA=0
+1/TextureSharpen=0
+1/AllowFlipping=1
+1/FSAAAppControlled=1
+1/LogAnisoAppControlled=1
+1/OpenGLImageSettings=1
+1/RedBrightness=0.000000
+1/GreenBrightness=0.000000
+1/BlueBrightness=0.000000
+1/RedContrast=0.000000
+1/GreenContrast=0.000000
+1/BlueContrast=0.000000
+1/RedGamma=1.000000
+1/GreenGamma=1.000000
+1/BlueGamma=1.000000
+1/DigitalVibrance[DFP-0]=0
+1/ImageSharpening[DFP-0]=0
+1/GPUScaling[DFP-0]=65537
+1/ColorSpace[DFP-0]=0
+1/ColorRange[DFP-0]=0
+1/XVideoTextureSyncToVBlank=1
+1/XVideoBlitterSyncToVBlank=0
+1/XVideoSyncToDisplay=65536
+2/CursorShadow=0
+2/CursorShadowAlpha=64
+2/CursorShadowRed=0
+2/CursorShadowGreen=0
+2/CursorShadowBlue=0
+2/CursorShadowXOffset=4
+2/CursorShadowYOffset=2
+2/SyncToVBlank=0
+2/LogAniso=0
+2/FSAA=0
+2/TextureSharpen=0
+2/AllowFlipping=1
+2/FSAAAppControlled=1
+2/LogAnisoAppControlled=1
+2/OpenGLImageSettings=1
+2/RedBrightness=0.000000
+2/GreenBrightness=0.000000
+2/BlueBrightness=0.000000
+2/RedContrast=0.000000
+2/GreenContrast=0.000000
+2/BlueContrast=0.000000
+2/RedGamma=1.000000
+2/GreenGamma=1.000000
+2/BlueGamma=1.000000
+2/DigitalVibrance[DFP-1]=0
+2/ImageSharpening[DFP-1]=0
+2/GPUScaling[DFP-1]=65537
+2/ColorSpace[DFP-1]=0
+2/ColorRange[DFP-1]=0
+2/XVideoTextureSyncToVBlank=1
+2/XVideoBlitterSyncToVBlank=0
+2/XVideoSyncToDisplay=131072
