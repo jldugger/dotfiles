@@ -11,6 +11,7 @@ servers = (
     address = "irc6.oftc.net";
     chatnet = "oftc";
     port = "6667";
+
     use_ssl = "no";
     ssl_verify = "no";
     autoconnect = "yes";
@@ -24,18 +25,17 @@ servers = (
     autoconnect = "yes";
   },
   {
-    address = "jabber.ome.ksu.edu";
-    port = "0";
+    address = "ksu.edu";
+    port = "5222";
     chatnet = "ome";
+
     autoconnect = "yes";
   }
 );
 
 chatnets = {
-  ome = {
-    type = "XMPP";
-    nick = "jldugger@jabber.ome.ksu.edu";
-  };
+  ome = { type = "XMPP"; nick = "jldugger@ksu.edu"; };
+
   EFNet = {
     type = "IRC";
     max_kicks = "4";
@@ -52,6 +52,7 @@ chatnets = {
   };
   freenode = {
     type = "IRC";
+
     max_kicks = "4";
     max_msgs = "1";
     max_modes = "4";
@@ -66,6 +67,7 @@ chatnets = {
   };
   slashnet = {
     type = "IRC";
+
     max_kicks = "4";
     max_msgs = "1";
     max_modes = "4";
@@ -76,13 +78,17 @@ chatnets = {
 
 channels = (
   { name = "#k-slug"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "ome@conference.ome.ksu.edu"; chatnet = "ome"; autojoin = "yes";},
+  { 
+    name = "ome@conference.ksu.edu";
+    chatnet = "ome";
+    autojoin = "yes";
+  },
   { name = "#kclug"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#ksu"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#linode"; chatnet = "oftc"; autojoin = "yes"; },
   { name = "#ubuntu-us-ks"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#kulua"; chatnet = "slashnet"; autojoin = "yes"; },
-  { name = "#pelican"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#pelican"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -341,8 +347,8 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "XMPP";
-        name = "ome@conference.jabber.ome.ksu.edu";
-        tag = "xmpp:jldugger@jabber.ome.ksu.edu";
+        name = "ome@conference.ksu.edu";
+        tag = "ome";
       }
     );
   };
@@ -357,5 +363,25 @@ windows = {
       }
     );
   };
+  11 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#kerberos";
+        tag = "freenode";
+      }
+    );
+  };
+  12 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "##devops";
+        tag = "freenode";
+      }
+    );
+  };
 };
-mainwindows = { 8 = { first_line = "1"; lines = "54"; }; };
+mainwindows = { 2 = { first_line = "1"; lines = "54"; }; };
