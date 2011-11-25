@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+# a script to print out the most common commands you use
+
+history | awk '{print $2}' | awk 'BEGIN {FS="|"} {print $1}' | sort | uniq -c | sort -n | tail | sort -nr
