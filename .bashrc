@@ -8,8 +8,8 @@
 # don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups,ignoreboth,ignorespace
 
-HISTFILESIZE=1000000000
-HISTSIZE=1000000
+export HISTFILESIZE=1000000000
+export HISTSIZE=1000000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
