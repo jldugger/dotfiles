@@ -99,7 +99,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 # set PATH to include private bin
-export PATH=~/bin:"${PATH}"
+export PATH=~/bin:/sbin:/usr/sbin:"${PATH}"
 
 # set up classpath
 export JAVA_HOME=/usr/lib/jvm/java-1.5.0-sun
@@ -122,3 +122,12 @@ alias mysql="mysql --safe-updates"
 #CVS settings
 export CVSROOT=:ext:jldugger@cvs.ome.ksu.edu:/as/data/cvsroot
 export CVS_RSH=/usr/bin/ssh
+
+#keychain
+keychain ~/.ssh/id_dsa
+. ~/.keychain/$HOSTNAME-sh
+
+#OSUOSL aliases
+alias gfr='git pull --rebase'
+alias mtr='mtr -t'
+#alias bat='bat -c ~/.bat.conf'
