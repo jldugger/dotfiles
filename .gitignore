@@ -11,19 +11,54 @@
 *.old
 \#*#
 *.default
+*.lock
+*.gcm
+*.backup
+gnucash-backup.gnucash
 
 # desktop crap
 .DS_Store
 Desktop.ini
+Desktop/
+Documents/
+Pictures/
+Recordings/
+.dmrc
+.gtk-bookmarks
+.macromedia/
+.pulse-cookie
+.esd_auth
+.ICEauthority
+.Xauthority
+.Xdefaults
+.fontconfig/
+.dbus
+.xsession-errors
+.xinputrc
 
 # caches
 thumbs.db
 *.swp
-
+VirtualBox VMs/
+.cache/
+.berkshelf/
+.VirtualBox/
+.virtualenvs/
+.java/
+.steam/
+.cpan/
+.liferea
 # logs
 *.log
 *_log
-
+.sqlite_history
+.ldapvi_history
+.psql_history
+.pry_history
+.bash_history
+.lesshst
+.wget-hsts
+.viminfo
 
 # images
 *.png
@@ -33,6 +68,7 @@ thumbs.db
 # databases
 *.csv
 *.sqlite
+*.db
 
 # binaries
 *.so
@@ -42,10 +78,49 @@ thumbs.db
 *.zip
 *.pdf
 *.dmg
+.gem/
 
-# ssl certs
+# private data
 *.key
 *.pem
 *.csr
 *.cert
 *.crt
+.ssh/
+.mrtrust
+.subversion/auth/
+.gnupg
+.gnucash/
+.aqbanking/
+.pki/
+.keychain/
+
+# i dont want to sort through this yet
+src/
+.adobe/
+.compiz/
+.compiz-old/
+.compiz-1/
+.eclipse/
+.local/
+.gconf/
+.config/
+.chef/
+.chefdk/
+.subversion/auth/
+.gnome/
+.gnome2/
+misc/
+.aws/
+.opera/
+.pulse/
+.mozilla/
+.nv/
+.purple/
+.remmina/
+.vagrant.d/
+.steampath
+.steampid
+.sad/
+.q3a/
+.spamassassin/
