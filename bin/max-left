@@ -1,3 +1,0 @@
-#!/bin/bash
-
-wmctrl -r :ACTIVE: -b remove,maximized_vert,maximized_horz && wmctrl -r :ACTIVE: -e 0,0,0,$(xwininfo -root | grep Width | awk '{print ($2/2)}'),$(xwininfo -root | grep Height | awk '{print $2}')
