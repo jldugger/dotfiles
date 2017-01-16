@@ -1,5 +1,8 @@
 <?xml version="1.0" ?>
 <apport>
-  <ignore mtime="1196704672" program="/usr/bin/deluge"/>
-  <ignore mtime="1213110356" program="/usr/lib/firefox-3.0/firefox"/>
+  <ignore mtime="1381498839" program="/usr/bin/nautilus"/>
+  <ignore mtime="1370954293" program="/usr/lib/tomboy/Tomboy.exe"/>
+  <ignore mtime="1401427352" program="/usr/bin/gnucash"/>
+  <ignore mtime="1444662531" program="/usr/lib/x86_64-linux-gnu/hud/hud-service"/>
+  <ignore mtime="1476102497" program="/usr/share/apport/apport-gtk"/>
 </apport>
