@@ -6,17 +6,19 @@
 [ -z "$PS1" ] && return
 
 # don't put duplicate lines in the history. See bash(1) for more options
-export HISTCONTROL=ignoredups,ignoreboth,ignorespace
+HISTCONTROL=ignoredups:ignorespace
 
-export HISTFILESIZE=1000000000
-export HISTSIZE=1000000
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# fo rsetting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTFILESIZE=1000000000
+HISTSIZE=1000000
+
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
-
-# append to the history file, don't overwrite it
-shopt -s histappend
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -57,81 +59,66 @@ unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
     ;;
 *)
     ;;
 esac
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-#if [ -f ~/.bash_aliases ]; then
-#    . ~/.bash_aliases
-#fi
-
-# enable color support of ls and also add handy aliases
-if [ "$TERM" != "dumb" ] && [ -x /usr/bin/dircolors ]; then
-    eval "`dircolors -b`"
-    alias ls='ls --color=auto'
-    #alias dir='ls --color=auto --format=vertical'
-    #alias vdir='ls --color=auto --format=long'
-
-    alias grep='grep --color=auto'
-    #alias fgrep='fgrep --color=auto'
-    #alias egrep='egrep --color=auto'
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
 fi
 
-# some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
-alias diff='diff -Naur'
-alias df='df -h'
-alias youtube-dl='youtube-dl -l'
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ]; then
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# set PATH to include private bin
-export PATH=~/bin:/sbin:/usr/sbin:"${PATH}"
+export EDITOR=vim
 
-# set up classpath
-export JAVA_HOME=/usr/lib/jvm/java-1.5.0-sun
-export MAVEN_OPTS=-XX:MaxPermSize=256m
+# colorful manual pages
 
-# IDEA settings
-export IDEA_JDK=/usr/lib/jvm/java-6-sun
-
-# faster cluster management (use -w to override)
-alias dsh='dsh -c -M'
+man() {
+    LESS_TERMCAP_md=$'\e[01;31m' \
+    LESS_TERMCAP_me=$'\e[0m' \
+    LESS_TERMCAP_se=$'\e[0m' \
+    LESS_TERMCAP_so=$'\e[01;44;33m' \
+    LESS_TERMCAP_ue=$'\e[0m' \
+    LESS_TERMCAP_us=$'\e[01;32m' \
+    command man "$@"
+}
 
 # debian ENV vars
 export DEBEMAIL="jldugger@gmail.com"
 export DEBFULLNAME="Justin Dugger"
-export EDITOR=/usr/bin/emacs
-
-# safety features
-alias mysql="mysql --safe-updates"
 
 # no more UTC irssi
 export TZ='America/Los_Angeles'
-
-
-#CVS settings
-export CVSROOT=:ext:jldugger@cvs.ome.ksu.edu:/as/data/cvsroot
-export CVS_RSH=/usr/bin/ssh
-
-#keychain
-keychain ~/.ssh/id_dsa
-. ~/.keychain/$HOSTNAME-sh
-
-#OSUOSL aliases
-alias gfr='git pull --rebase'
-alias mtr='mtr -t'
-#alias bat='bat -c ~/.bat.conf'
