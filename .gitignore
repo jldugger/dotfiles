@@ -47,7 +47,8 @@ VirtualBox VMs/
 .java/
 .steam/
 .cpan/
-.liferea
+.liferea/
+
 # logs
 *.log
 *_log
@@ -59,6 +60,7 @@ VirtualBox VMs/
 .lesshst
 .wget-hsts
 .viminfo
+.vim/
 
 # images
 *.png
