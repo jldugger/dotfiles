@@ -15,5 +15,3 @@ if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
 
-# checkout from ksusns gforge
-export CVS_RSH=ssh 
