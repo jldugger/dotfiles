@@ -21,8 +21,11 @@ gnucash-backup.gnucash
 Desktop.ini
 Desktop/
 Documents/
+Downloads/
+Music/
 Pictures/
 Recordings/
+Ubuntu One/
 .dmrc
 .gtk-bookmarks
 .macromedia/
@@ -42,12 +45,16 @@ thumbs.db
 VirtualBox VMs/
 .cache/
 .berkshelf/
+.novaclient/
 .VirtualBox/
 .virtualenvs/
 .java/
 .steam/
 .cpan/
 .liferea/
+.liferea_1.8/
+.rnd
+.pylint.d/
 
 # junk
 .subversion/README.txt
@@ -56,12 +63,17 @@ VirtualBox VMs/
 # logs
 *.log
 *_log
-.sqlite_history
+
+# histories
+.bash_history
+.gnuplot_history
 .ldapvi_history
+.lesshst
+.lvm_history
+.mysql_history
 .psql_history
 .pry_history
-.bash_history
-.lesshst
+.sqlite_history
 .wget-hsts
 .viminfo
 .vim/
@@ -75,6 +87,7 @@ VirtualBox VMs/
 *.csv
 *.sqlite
 *.db
+data/
 
 # binaries
 *.so
@@ -84,7 +97,10 @@ VirtualBox VMs/
 *.zip
 *.pdf
 *.dmg
+.AMD/
 .gem/
+.jars/
+.rpmdb/
 
 # private data
 *.key
@@ -92,6 +108,7 @@ VirtualBox VMs/
 *.csr
 *.cert
 *.crt
+.aws/
 .ssh/
 .mrtrust
 .subversion/auth/
@@ -100,10 +117,15 @@ VirtualBox VMs/
 .aqbanking/
 .pki/
 .keychain/
+.openvpn/
+.openstack
 
 # i dont want to sort through this yet
 src/
+misc/
 .adobe/
+.android/
+.cfagent/
 .compiz/
 .compiz-old/
 .compiz-1/
@@ -116,8 +138,7 @@ src/
 .subversion/auth/
 .gnome/
 .gnome2/
-misc/
-.aws/
+.hplip
 .opera/
 .pulse/
 .mozilla/
