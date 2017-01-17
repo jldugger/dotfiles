@@ -49,6 +49,9 @@ VirtualBox VMs/
 .cpan/
 .liferea/
 
+# junk
+.subversion/README.txt
+
 # logs
 *.log
 *_log
