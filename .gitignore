@@ -51,6 +51,7 @@ VirtualBox VMs/
 
 # junk
 .subversion/README.txt
+.links2/bookmarks.html
 
 # logs
 *.log
