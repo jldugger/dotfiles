@@ -133,3 +133,9 @@ export KITCHEN_GLOBAL_YAML="/opt/kitchen/kitchen.global.yml"
 if [ -f ~/.openstack/openstack_envs ]; then
     . ~/.openstack/openstack_envs
 fi
+
+# oh-my-git
+if [ -f ~/.oh-my-git/prompt.sh ]; then
+    . ~/.oh-my-git/prompt.sh
+fi
+
