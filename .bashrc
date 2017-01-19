@@ -138,4 +138,3 @@ fi
 if [ -f ~/.oh-my-git/prompt.sh ]; then
     . ~/.oh-my-git/prompt.sh
 fi
-
