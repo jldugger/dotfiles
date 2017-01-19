@@ -1,0 +1,12 @@
+
+[.oh-my-git]
+checkout = git clone 'https://github.com/arialdomartini/oh-my-git.git' '.oh-my-git'
+
+[src/blog]
+checkout = git clone 'https://github.com/jldugger/blog.git' 'blog'
+
+[src/albums.pwnguin.net]
+checkout = git clone 'https://github.com/jldugger/albums.pwnguin.net' 'albums.pwnguin.net'
+
+[src/pwnguin-cookbook]
+checkout = git clone 'https://github.com/jldugger/pwnguin-cookbook' 'pwnguin-cookbook'
