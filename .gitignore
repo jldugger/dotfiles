@@ -15,6 +15,8 @@
 *.gcm
 *.backup
 gnucash-backup.gnucash
+temp/
+tmp/
 
 # desktop crap
 .DS_Store
@@ -78,6 +80,10 @@ VirtualBox VMs/
 .viminfo
 .vim/
 
+# myrepos managed
+src/
+.oh-my-git/
+
 # images
 *.png
 *.gif
@@ -97,6 +103,7 @@ data/
 *.zip
 *.pdf
 *.dmg
+*.ttf
 .AMD/
 .gem/
 .jars/
@@ -121,7 +128,6 @@ data/
 .openstack
 
 # i dont want to sort through this yet
-src/
 misc/
 .adobe/
 .android/
