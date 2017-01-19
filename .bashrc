@@ -122,3 +122,14 @@ export DEBFULLNAME="Justin Dugger"
 
 # no more UTC irssi
 export TZ='America/Los_Angeles'
+
+# set up chef settings
+eval "$(chef shell-init bash)"
+alias kitchen=/home/jldugger/src/chef-repo/osuosl-cookbooks/workstation/files/default/kitchen/bin/kitchen
+export KITCHEN_GLOBAL_YAML="/opt/kitchen/kitchen.global.yml"
+
+# openstack
+
+if [ -f ~/.openstack/openstack_envs ]; then
+    . ~/.openstack/openstack_envs
+fi
