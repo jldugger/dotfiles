@@ -57,6 +57,7 @@ VirtualBox VMs/
 .liferea_1.8/
 .rnd
 .pylint.d/
+.tomboy_sync
 
 # junk
 .subversion/README.txt
