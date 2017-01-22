@@ -1,3 +1,4 @@
+#!/bin/bash
 alias gfr="git pull --rebase"
 alias mtr='mtr -t'
 alias diff='diff -Naur'
