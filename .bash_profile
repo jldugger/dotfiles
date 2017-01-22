@@ -1,3 +1,4 @@
+#!/bin/bash
 # ~/.bash_profile: executed by bash(1) for login shells.
 # see /usr/share/doc/bash/examples/startup-files for examples.
 # the files are located in the bash-doc package.
@@ -6,6 +7,7 @@
 #umask 022
 
 # include .bashrc if it exists
+# shellcheck disable=SC1090
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi

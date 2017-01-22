@@ -123,7 +123,7 @@ export DEBFULLNAME="Justin Dugger"
 export TZ='America/Los_Angeles'
 
 # set up chef settings on workstations
-if [ ! -z `which chef` ]; then
+if [ ! -z "$(which chef)" ]; then
     eval "$(chef shell-init bash)"
     alias kitchen=/home/jldugger/src/chef-repo/osuosl-cookbooks/workstation/files/default/kitchen/bin/kitchen
     export KITCHEN_GLOBAL_YAML="/opt/kitchen/kitchen.global.yml"
@@ -132,12 +132,12 @@ fi
 # openstack
 
 if [ -f ~/.openstack/openstack_envs ]; then
-    # shellcheck source=./.openstack/openstack_envs
+    # shellcheck disable=SC1090
     . ~/.openstack/openstack_envs
 fi
 
 # oh-my-git
 if [ -f ~/.oh-my-git/prompt.sh ]; then
-    # shellcheck source=./.oh-my-git/prompt.sh
+    # shellcheck disable=SC1090
     . ~/.oh-my-git/prompt.sh
 fi
