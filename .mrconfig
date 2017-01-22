@@ -10,3 +10,6 @@ checkout = git clone 'https://github.com/jldugger/albums.pwnguin.net' 'albums.pw
 
 [src/pwnguin-cookbook]
 checkout = git clone 'https://github.com/jldugger/pwnguin-cookbook' 'pwnguin-cookbook'
+
+[.fonts/awesome-terminal-fonts]
+checkout = git clone 'https://github.com/gabrielelana/awesome-terminal-fonts.git' 'awesome-terminal-fonts'
