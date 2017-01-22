@@ -7,3 +7,5 @@ addons:
     - shellcheck
 notifications:
   email: true
+script:
+- ./.test.sh
