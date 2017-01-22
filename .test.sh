@@ -6,11 +6,17 @@
 set -e
 set -o pipefail
 
-(
+
 # find all executables and run `shellcheck`
+
+RET=0
 for f in $(git ls-files); do
-	if file "$f" | grep --quiet shell; then
-		shellcheck -x "$f" && echo "[OK]: sucessfully linted $f"
-	fi
+    if file "$f" | grep --quiet shell; then
+        shellcheck -x "$f" && echo "[OK]: sucessfully linted $f"
+        if [ $? -ne 0 ]; then
+            RET=-1
+        fi
+fi
 done
-)
+
+exit $RET
