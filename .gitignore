@@ -84,6 +84,7 @@ VirtualBox VMs/
 # myrepos managed
 src/
 .oh-my-git/
+.fonts/
 
 # images
 *.png
