@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for f in $(find ~/.bash.d/private/ -type f); do
+    source $f;
+done

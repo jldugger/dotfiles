@@ -10,4 +10,3 @@ alias mysql="mysql --safe-updates"
 
 # faster cluster management (use -w to override)
 alias dsh='dsh -c -M'
-
