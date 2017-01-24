@@ -1,4 +1,11 @@
 #!/bin/bash
+
+# basic ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+
 alias gfr="git pull --rebase"
 alias mtr='mtr -t'
 alias diff='diff -Naur'
