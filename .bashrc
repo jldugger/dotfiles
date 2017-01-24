@@ -88,6 +88,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 while IFS= read -r -d file
 do
+    # shellcheck disable=SC1090
     source "$file";
 done <   <(find ~/.bash.d/ -type f)
 
