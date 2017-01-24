@@ -86,11 +86,11 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # run-parts for .bash.d/
 
-while IFS= read -r -d file
+while IFS= read -r -d '' file
 do
     # shellcheck disable=SC1090
     source "$file";
-done <   <(find ~/.bash.d/ -type f)
+done <   <(find ~/.bash.d/ -type f -print0)
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
