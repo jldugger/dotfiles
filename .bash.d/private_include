@@ -1,7 +1,8 @@
 #!/bin/bash
-
-while IFS= read -r -d '' file
-do
-  # shellcheck disable=SC1090
-  source "$file"
-done <   <(find ~/.bash.d/private/ -type f -print0)
+if [ -d  ~/.bash.d/private/ ]; then
+    while IFS= read -r -d '' file
+    do
+        # shellcheck disable=SC1090
+        source "$file"
+    done <   <(find ~/.bash.d/private/ -type f -print0)
+fi
