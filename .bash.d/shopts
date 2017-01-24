@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# minor errors in the spelling of a directory component of cd will be corrected. (transposed characters, 
+# a missing character, and a character too many). If a correction is found, he command proceeds.
+
+shopt -s cdspell
+
+# do not check for mail
+shopt -u mailwarn
