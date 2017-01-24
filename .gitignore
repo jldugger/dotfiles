@@ -12,9 +12,7 @@
 \#*#
 *.default
 *.lock
-*.gcm
 *.backup
-gnucash-backup.gnucash
 temp/
 tmp/
 
