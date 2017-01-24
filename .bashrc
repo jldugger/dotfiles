@@ -86,9 +86,10 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # run-parts for .bash.d/
 
-for f in $(find ~/.bash.d/ -type f); do
-    source $f;
-done
+while IFS= read -r -d file
+do
+    source "$file";
+done <   <(find ~/.bash.d/ -type f)
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
