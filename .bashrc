@@ -79,9 +79,6 @@ fi
 
 export EDITOR=vim
 
-# no more UTC irssi
-export TZ='America/Los_Angeles'
-
 # openstack
 
 if [ -f ~/.openstack/openstack_envs ]; then
