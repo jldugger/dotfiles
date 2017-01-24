@@ -83,10 +83,6 @@ fi
 
 export EDITOR=vim
 
-# debian ENV vars
-export DEBEMAIL="jldugger@gmail.com"
-export DEBFULLNAME="Justin Dugger"
-
 # no more UTC irssi
 export TZ='America/Los_Angeles'
 

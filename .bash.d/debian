@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# debian ENV vars
+export DEBEMAIL="jldugger@gmail.com"
+export DEBFULLNAME="Justin Dugger"
