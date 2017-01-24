@@ -127,8 +127,8 @@ data/
 .pki/
 .keychain/
 .openvpn/
-.openstack/
 .bash.d/private/
+
 # i dont want to sort through this yet
 misc/
 .adobe/
