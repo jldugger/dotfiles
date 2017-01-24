@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# don't put duplicate lines in the history. See bash(1) for more options
+export HISTCONTROL=ignoredups:ignorespace
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+export HISTFILESIZE=1000000000
+export HISTSIZE=1000000
+
