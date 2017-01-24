@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Permit only those UPDATE and DELETE statements that specify which rows to modify by using key values.
+alias mysql='mysql --safe-updates'
