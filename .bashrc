@@ -78,10 +78,3 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 export EDITOR=vim
-
-# openstack
-
-if [ -f ~/.openstack/openstack_envs ]; then
-    # shellcheck disable=SC1090
-    . ~/.openstack/openstack_envs
-fi
