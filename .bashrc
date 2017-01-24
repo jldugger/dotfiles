@@ -88,9 +88,3 @@ if [ -f ~/.openstack/openstack_envs ]; then
     # shellcheck disable=SC1090
     . ~/.openstack/openstack_envs
 fi
-
-# oh-my-git
-if [ -f ~/.oh-my-git/prompt.sh ]; then
-    # shellcheck disable=SC1090
-    . ~/.oh-my-git/prompt.sh
-fi
