@@ -126,6 +126,7 @@ data/
 .keychain/
 .openvpn/
 .bash.d/private/
+.gitconfig.d/private.conf
 
 # i dont want to sort through this yet
 misc/
