@@ -42,3 +42,7 @@
 [help]
         # Automatically correct and execute mistyped commands
 	autocorrect = 1
+
+[url "git+ssh://USER@git.launchpad.net/"]
+        # https://help.launchpad.net/Code/Git
+        insteadof = lp:
