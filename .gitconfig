@@ -1,48 +1,14 @@
-[user]
-        name = Justin Dugger
-        email = jldugger@osuosl.org
+# sadly, include.path does not support *
 
-[color]
-        diff = auto
-        status = auto
-        branch = auto
-        interactive = auto
-        ui = true
-        pager = true
-
-[color "branch"]
-        current = yellow reverse
-        local = yellow
-        remote = green
-
-[color "diff"]
-        meta = yellow bold
-        frag = magenta bold
-        old = red bold
-        new = green bold
-
-[color "status"]
-        added = yellow
-        changed = green
-        untracked = cyan
-
-[core]
-        pager = less -FRSX
-        whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-        excludesfiles = ~/.gitignore
-        editor = emacs
-	excludesfile = /home/jldugger/.gitignore_global
-
-[alias]
-        co = checkout
-        stat = status
-[push]
-	default = current
-
-[help]
-        # Automatically correct and execute mistyped commands
-	autocorrect = 1
-
-[url "git+ssh://USER@git.launchpad.net/"]
-        # https://help.launchpad.net/Code/Git
-        insteadof = lp:
+[include]
+        path = ~/.gitconfig.d/alias.conf
+        path = ~/.gitconfig.d/autocorrect.conf
+        path = ~/.gitconfig.d/colors.conf
+        path = ~/.gitconfig.d/gitignore.conf
+        path = ~/.gitconfig.d/launchpad.conf
+        path = ~/.gitconfig.d/programs.conf
+        path = ~/.gitconfig.d/push.conf
+        path = ~/.gitconfig.d/user.conf
+        path = ~/.gitconfig.d/whitespace.conf
+        # allow for local overrides
+        path = ~/.gitconfig.d/private.conf
