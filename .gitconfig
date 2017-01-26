@@ -38,5 +38,7 @@
         stat = status
 [push]
 	default = current
+
 [help]
+        # Automatically correct and execute mistyped commands
 	autocorrect = 1
