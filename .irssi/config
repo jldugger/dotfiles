@@ -1,15 +1,16 @@
 servers = (
   {
-    address = "irc.freenode.net";
+    address = "chat.freenode.net";
     chatnet = "freenode";
-    port = "7000";
-    use_ssl = "ON";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_cert = "~/.irssi/pwnguin.pem";
+    ssl_verify = "no";
     autoconnect = "yes";
   },
-  { address = "irc.gnome.org"; chatnet = "GIMPNet"; port = "6667"; },
   {
-    address = "irc6.oftc.net";
-    chatnet = "oftc";
+    address = "jldugger.irc.slack.com";
+    chatnet = "slack";
     port = "6667";
 
     use_ssl = "no";
@@ -34,27 +35,10 @@ servers = (
 );
 
 chatnets = {
-  ome = { type = "XMPP"; nick = "jldugger@ksu.edu"; };
-
-  EFNet = {
-    type = "IRC";
-    max_kicks = "4";
-    max_modes = "4";
-    max_msgs = "3";
-    max_whois = "1";
-  };
-  Undernet = {
-    type = "IRC";
-    max_kicks = "4";
-    max_modes = "3";
-    max_msgs = "3";
-    max_whois = "30";
-  };
   freenode = {
     type = "IRC";
-
-    max_kicks = "4";
-    max_msgs = "1";
+    max_kicks = "1";
+    max_msgs = "4";
     max_modes = "4";
     max_whois = "1";
   };
@@ -65,30 +49,20 @@ chatnets = {
     max_msgs = "3";
     max_whois = "1";
   };
-  slashnet = {
-    type = "IRC";
-
-    max_kicks = "4";
-    max_msgs = "1";
-    max_modes = "4";
-    max_whois = "1";
-  };
-  GIMPNet = { type = "IRC"; };
+  "leadership-slack" = { type = "IRC"; nick = "pwnguin"; };
+  "kulua-slack" = { type = "IRC"; };
+  slack = { type = "IRC"; };
+  "cass-slack" = { type = "IRC"; nick = "pwnguin"; };
 };
 
 channels = (
   { name = "#k-slug"; chatnet = "freenode"; autojoin = "yes"; },
-  { 
-    name = "ome@conference.ksu.edu";
-    chatnet = "ome";
-    autojoin = "yes";
-  },
-  { name = "#kclug"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#ksu"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#linode"; chatnet = "oftc"; autojoin = "yes"; },
-  { name = "#ubuntu-us-ks"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#kulua"; chatnet = "slashnet"; autojoin = "yes"; },
-  { name = "#pelican"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#osu-lug"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#osu-is"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#osuosl"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#osuosl-infra"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#osuosl-staff"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#osuosl-phb"; chatnet = "freenode"; autojoin = "yes"; },
 );
 
 aliases = {
@@ -243,50 +217,57 @@ settings = {
     real_name = "Justin L Dugger";
     user_name = "jldugger";
     nick = "pwnguin";
-    resolve_prefer_ipv6 = "ON";
+    resolve_prefer_ipv6 = "OFF";
     rawlog_lines = "50";
+    timestamp_format = "%H:%M";
   };
   "fe-common/core" = {
     theme = "default";
     autolog = "yes";
+    autolog_level = "all -crap -clientcrap";
     term_charset = "UTF-8";
-    activity_hide_targets = "#linode #ubuntu-motu";
+    activity_hide_targets = "= #asfinfra #teachengineering #osu-lug  #drupal-infrastructure #osuosl-dev #phpbb-website #debian-admin  #osuosl-gsoc";
     activity_hide_level = "JOINS PARTS QUITS NICKS";
     completion_keep_privates = "5";
     completion_keep_publics = "25";
     max_command_history = "50";
     autoclose_query = "30";
     use_status_window = "yes";
+    emphasis_replace = "yes";
   };
   "fe-text" = {
     actlist_sort = "refnum";
     scrollback_lines = "200";
     scrollback_time = "16hours";
+    term_force_colors = "no";
   };
   "irc/core" = { alternate_nick = "jldugger"; };
+  "perl/core/scripts" = {
+    twitter_usernames = "WildPwnguin";
+    twitter_poll_interval = "3000";
+  };
 };
 
 ignores = (
-  { level = "JOINS PARTS QUITS"; channels = ( "#ubuntu+1" ); },
-  { mask = "luke-jr_"; level = "ALL"; },
-  { mask = "ljrbot"; level = "ALL"; },
   { mask = "CHANFIX"; level = "ALL"; },
-  { level = "JOINS PARTS QUITS"; channels = ( "#ubuntu-us-ks" ); }
+  { mask = "Ahmuck"; level = "ALL"; },
+  { mask = "ResistanceBot"; level = "ALL"; },
+  { mask = "ResistanceBot_"; level = "ALL"; },
+  { level = "MODES"; servertag = "slack"; }
 );
 
-logs = { "#k-slug" = { level = "ALL"; }; };
+logs = {
+  "#k-slug" = { level = "ALL"; };
+  "~/irc.log.Window13" = {
+    level = "ALL";
+    items = ( { type = "window"; name = "13"; } );
+  };
+  "#osuosl-infra" = { level = "ALL"; };
+};
 
 hilights = (
   { text = "dugger"; nick = "yes"; word = "yes"; },
-  {
-    text = ".*";
-    nick = "yes";
-    word = "yes";
-    regexp = "yes";
-    channels = ( "#ubuntu-us-ks" );
-  },
-  { text = ".* #jccc -regexp"; nick = "yes"; word = "yes"; },
-  { text = ".* #davical -regexp"; nick = "yes"; word = "yes"; }
+  { text = "pwnguin"; nick = "yes"; word = "yes"; }
 );
 windows = {
   1 = { };
@@ -305,7 +286,7 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#kclug";
+        name = "#osu-lug";
         tag = "freenode";
       }
     );
@@ -315,7 +296,7 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#ksu";
+        name = "#OSU-IS";
         tag = "freenode";
       }
     );
@@ -325,8 +306,8 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#linode";
-        tag = "oftc";
+        name = "#general";
+        tag = "kulua-slack";
       }
     );
   };
@@ -335,7 +316,7 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#ubuntu-us-ks";
+        name = "#osuosl";
         tag = "freenode";
       }
     );
@@ -345,8 +326,8 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#kulua";
-        tag = "slashnet";
+        name = "#osuosl-infra";
+        tag = "freenode";
       }
     );
   };
@@ -354,30 +335,30 @@ windows = {
     items = (
       {
         type = "CHANNEL";
-        chat_type = "XMPP";
-        name = "ome@conference.ksu.edu";
-        tag = "ome";
-      }
-    );
-  };
-  9 = { name = "twitter"; };
-  10 = {
-    items = (
-      {
-        type = "CHANNEL";
         chat_type = "IRC";
-        name = "#pelican";
+        name = "#osuosl-staff";
         tag = "freenode";
       }
     );
   };
+  9 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#osuosl-phb";
+        tag = "freenode";
+      }
+    );
+  };
+  10 = { name = "twitter"; };
   11 = {
     items = (
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#kerberos";
-        tag = "freenode";
+        name = "#tools";
+        tag = "leadership-slack";
       }
     );
   };
@@ -386,10 +367,90 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "##devops";
-        tag = "freenode";
+        name = "#general";
+        tag = "leadership-slack";
+      }
+    );
+  };
+  13 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#dailychallenge";
+        tag = "leadership-slack";
+      }
+    );
+  };
+  14 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#devops";
+        tag = "leadership-slack";
+      }
+    );
+  };
+  15 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#highered";
+        tag = "leadership-slack";
+      }
+    );
+  };
+  16 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#gaming";
+        tag = "leadership-slack";
+      }
+    );
+  };
+  17 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#opensource";
+        tag = "leadership-slack";
+      }
+    );
+  };
+  18 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#pdx";
+        tag = "leadership-slack";
+      }
+    );
+  };
+  19 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#recommendedmedia";
+        tag = "leadership-slack";
+      }
+    );
+  };
+  20 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#general";
+        tag = "cass-slack";
       }
     );
   };
 };
-mainwindows = { 2 = { first_line = "1"; lines = "54"; }; };
+mainwindows = { 12 = { first_line = "1"; lines = "75"; }; };
