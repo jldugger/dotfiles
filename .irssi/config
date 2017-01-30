@@ -135,6 +135,14 @@ aliases = {
   SBAR = "STATUSBAR";
   INVITELIST = "mode $C +I";
   Q = "QUERY";
+  TABLE = "/say (╯°□°）╯︵ ┻━┻";
+  EYES = "/say ಠ_ಠ";
+  "/no" = "/msg ResistanceBot !vote no";
+  NO = "/msg ResistanceBot !vote no";
+  YES = "/msg ResistanceBot !vote yes";
+  PASS = "/msg ResistanceBot !mission pass";
+  FAIL = "/msg ResistanceBot !mission fail";
+  shrug = "say ¯\\\\_(ツ)_/¯";
 };
 
 statusbar = {
