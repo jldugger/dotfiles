@@ -1,3 +1,2 @@
-load xmpp
 /script load twirssi.pl
 /twitter_login WildPwnguin
