@@ -64,6 +64,7 @@ VirtualBox VMs/
 # logs
 *.log
 *_log
+irclogs/
 
 # histories
 .bash_history
