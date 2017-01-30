@@ -17,7 +17,7 @@ $Data::Dumper::Indent = 1;
 
 use vars qw($VERSION %IRSSI);
 
-$VERSION = sprintf '%s', q$Version: v2.6.0$ =~ /^\w+:\s+v(\S+)/;
+$VERSION = sprintf '%s', q$Version: v2.6.4$ =~ /^\w+:\s+v(\S+)/;
 %IRSSI   = (
     authors     => '@zigdon, @gedge',
     contact     => 'zigdon@gmail.com',
@@ -26,7 +26,7 @@ $VERSION = sprintf '%s', q$Version: v2.6.0$ =~ /^\w+:\s+v(\S+)/;
       . 'Can optionally set your bitlbee /away message to same',
     license => 'GNU GPL v2',
     url     => 'http://twirssi.com',
-    changed => '$Date: 2013-06-08 13:30:00 +0000$',
+    changed => '$Date: 2014-01-16 21:59:02 +0000$',
 );
 
 my $twit;	# $twit is current logged-in Net::Twitter object (usually one of %twits)
@@ -322,10 +322,10 @@ sub format_expand {
     my %args = @_;
     $args{fmt} =~ s/\$n/\@$args{nick}/g;
     if (defined $args{data} and $args{data} ne '') {
-        $args{fmt} =~ s/\${|\$}//g;
+        $args{fmt} =~ s/\$\{|\$}//g;
         $args{fmt} =~ s/\$c/$args{data}/g;
     } else {
-        $args{fmt} =~ s/\${.*?\$}//g;
+        $args{fmt} =~ s/\$\{.*?\$}//g;
     }
     $args{fmt} =~ s/\$t/$args{tweet}/g;
     return $args{fmt};
@@ -1006,7 +1006,8 @@ sub rate_limited {
             for my $uri (keys %{ $rate_limit->{resources}->{$resource} }) {
                 if ( $rate_limit->{resources}->{$resource}->{$uri}->{remaining} < 1 ) {
                     &notice( [ 'error', $username, $fh ],
-                        "Rate limit exceeded for $resource ($uri), try again after $rate_limit->{resources}->{$resource}->{$uri}->{reset}" );
+                        "Rate limit exceeded for $resource ($uri), try again after " .
+			localtime $rate_limit->{resources}->{$resource}->{$uri}->{reset} );
                     $res = 1;
                 }
             }
@@ -1024,7 +1025,10 @@ sub verify_twitter_object {
                  "Twitter timeout for $user\@$service set to $timeout" );
     }
 
-    unless ( $twit->verify_credentials() ) {
+    my $verified = 0;
+    eval { $verified = $twit->verify_credentials(); };
+
+    if ( $@ or not $verified ) {
         &notice(
             [ "tweet", "$user\@$service" ],
             "Login as $user\@$service failed"
@@ -1525,39 +1529,48 @@ sub scan_cursor {
     my $fn_info   = shift;
 
     my $whole_set = {};
-    my $paging_broken = 0;
     my $fn_args = { (defined $fn_info->{args} ? %{ $fn_info->{args} } : ()) };
     my $fn_name = $fn_info->{fn};
+    my $pg_type = index($fn_info->{cp}, 'c') >= 0 ? 'cursor' : ($fn_info->{cp} =~ /p(\d*)/ ? 'page' : '');
+    my $max_page = 10;
+    $max_page = $1 if $pg_type eq 'page' and length($1) > 0;
     eval {
-        for (my $cursor = -1, my $page = 1; $cursor and $page <= 10 and not $paging_broken; $page++) {
-            if (-1 != index($fn_info->{cp}, 'c')) {
+        for (my($cursor, $page) = (-1, 1); $cursor and $page <= $max_page; $page++) {
+            if ($pg_type eq 'cursor') {
                 $fn_args->{cursor} = $cursor;
-            }
-            if ($fn_info->{cp} =~ /p(\d*)/) {
-                my $max_page = $1;
+            } elsif ($pg_type eq 'page') {
                 $fn_args->{page} = $page;
-                last if length($max_page) > 0 and $page > $max_page;
             }
-            &debug($fh, "%G$username%n Loading $type_str page $page...");
+            &debug($fh, "%G$username%n Loading $type_str $pg_type " . ($pg_type eq 'cursor' ? $cursor : $page));
             my $collection = $u_twit->$fn_name($fn_args);
-            last unless $collection;
-            if (-1 != index($fn_info->{cp}, 'c')) {
+            last if not $collection;
+            if ($pg_type eq 'cursor') {
                 $cursor = $collection->{next_cursor};
-                $collection = $collection->{$fn_info->{set_key}};
+                $collection = $collection->{$fn_info->{set_key}} if defined $fn_info->{set_key};
             }
+            last if 0 == @$collection;
             foreach my $coll_item (@$collection) {
-                if (-1 != index($fn_info->{cp}, 'p')
+                if ($pg_type eq 'page'
                        and defined $whole_set->{$coll_item->{$fn_info->{item_key}}}) {
-                    # fix broken paging, as we've seen this $coll_item before
-                    $paging_broken = 1;
-                    last;
+                    &debug($fh, "%G$username%n repeated page $page key " . $fn_info->{item_key} .
+                       ' val ' . $coll_item->{$fn_info->{item_key}} .
+                       ''); #' pre ' . Dumper($whole_set->{$coll_item->{$fn_info->{item_key}}}));
+                    next;
                 }
-                $whole_set->{$coll_item->{$fn_info->{item_key}}} = (defined $fn_info->{item_val}
-								? $coll_item->{$fn_info->{item_val}} : time);
+                $whole_set->{$coll_item->{$fn_info->{item_key}}} = (
+                    defined $fn_info->{item_val}
+                        ? $coll_item->{$fn_info->{item_val}}
+                        : (defined $fn_info->{item_keys}
+                              ? (ref($fn_info->{item_keys}) eq 'ARRAY'
+                                    ? { map { $_ => $coll_item->{$_} } @{ $fn_info->{item_keys} } }
+                                    : { %$coll_item })
+                              : time)
+                );
+                $fn_args->{max_id} = $coll_item->{id_str} if defined $fn_args->{since_id};
             }
         }
     };
-foreach my $item (split "\n", Dumper($whole_set)) { &debug($fh, "crsr: $item"); }
+foreach my $item (split "\n", Dumper($whole_set)) { &debug($fh, "$pg_type: $item"); }
 
     if ($@) {
         &notice(['error', $username, $fh], "$username: Error updating $type_str.  Aborted.");
@@ -1588,7 +1601,7 @@ sub get_lists {
     # ensure $new_lists->{$list_name} = $id
     my %more_args = ();
     my $new_lists = &scan_cursor('lists', $u_twit, $username, $fh,
-				{ fn=>'get_lists', cp=>'', set_key=>'lists',
+				{ fn=>'list_ownerships', cp=>'c', set_key=>'lists',
 					args=>{ user=>$userid, %more_args }, item_key=>'name', item_val=>'id', });
     return if not defined $new_lists;
 
@@ -2084,47 +2097,20 @@ sub get_tweets {
 
     return if &rate_limited($obj, $username, $fh);
 
-    &debug($fh, "%G$username%n Polling for tweets");
-    my $tweets = [];
-    eval {
-        my %call_attribs = ( page => 1 );
-        $call_attribs{count} = $settings{track_replies} if $settings{track_replies};
-        $call_attribs{since_id} = $state{__last_id}{$username}{timeline}
+    my %call_attribs = ();
+    $call_attribs{count} = 200;
+    $call_attribs{since_id} = $state{__last_id}{$username}{timeline}
                            if defined $state{__last_id}{$username}{timeline};
-        for ( ; $call_attribs{page} < 2 ; $call_attribs{page}++) {
-            &debug($fh, "%G$username%n timeline " . join(' ', map { $_ . '=' . $call_attribs{$_} } sort keys %call_attribs));
-            my $page_tweets = $obj->home_timeline( \%call_attribs );
-            last if not defined $page_tweets or @$page_tweets == 0;
-            unshift @$tweets, @$page_tweets;
-        }
-    };
 
-    if ($@) {
+    my $tweets = &scan_cursor('home_timeline', $obj, $username, $fh,
+				{ fn=>'home_timeline', cp=>'p', args => \%call_attribs,
+					item_key=>'id_str', item_keys=>1 });
+
+    if (not defined $tweets) {
         print $fh "t:error $username Error during home_timeline call: Aborted.\n";
-        print $fh "t:debug : $_\n" foreach split /\n/, Dumper($@);
         return;
     }
-
-
-=pod
-
-    unless ( ref $tweets ) {
-        if ( $obj->can("get_error") ) {
-            my $error = "Unknown error";
-            eval { $error = JSON::Any->jsonToObj( $obj->get_error() ) };
-            unless ($@) { $error = $obj->get_error() }
-            &notice([ 'error', $username, $fh],
-                "$username: API Error during home_timeline call: Aborted");
-            print $fh "t:debug : $_\n" foreach split /\n/, Dumper($error);
-
-        } else {
-            &notice([ 'error', $username, $fh],
-                "$username: API Error in home_timeline call. Aborted.");
-        }
-        return;
-    }
-
-=cut
+    $tweets = [ map { $tweets->{$_} } sort { cmp_id($b, $a) } keys %$tweets ];
 
     print $fh "t:debug %G$username%n got ", scalar(@$tweets), ' tweets',
 		(@$tweets	? ', first/last: ' . join('/',
@@ -2242,7 +2228,9 @@ sub do_subscriptions {
                 $search = $obj->search(
                     {
                         q        => $topic,
-                        since_id => $state{__last_id}{$username}{__search}{$topic}
+                        since_id => $state{__last_id}{$username}{__search}{$topic} eq '9223372036854775807'
+                                     ? 0
+                                     : $state{__last_id}{$username}{__search}{$topic},
                     }
                 );
             };
@@ -2258,11 +2246,19 @@ sub do_subscriptions {
                 print $fh "t:debug %G$username%n Invalid search results when searching",
                   " for '$topic'. Aborted.\n";
                 return;
+            } elsif ( $search->{search_metadata}->{max_id} eq '9223372036854775807' ) {
+                &debug($fh, "%G$username%n Error: search max_id = MAX_INT64");
+                $state{__last_id}{$username}{__search}{$topic} = 0;
+                foreach my $t ( reverse @{ $search->{statuses} } ) {
+                    $state{__last_id}{$username}{__search}{$topic} = $t->{id}
+                      if cmp_id($t->{id}, $state{__last_id}{$username}{__search}{$topic}) > 0;
+                }
+            } else {
+                $state{__last_id}{$username}{__search}{$topic} = $search->{search_metadata}->{max_id};
             }
 
-            $state{__last_id}{$username}{__search}{$topic} = $search->{search_metadata}->{max_id};
             printf $fh "t:searchid id:%s ac:%s topic:%s\n",
-              $search->{search_metadata}->{max_id}, $username, &encode_for_file($topic);
+              $state{__last_id}{$username}{__search}{$topic}, $username, &encode_for_file($topic);
 
             foreach my $t ( reverse @{ $search->{statuses} } ) {
                 next if exists $blocks{$username}{ $t->{user}->{screen_name} };
@@ -2643,7 +2639,8 @@ sub monitor_child {
             if ( $meta{type} eq 'searchid' ) {
                 &debug("%G$meta{username}%n Search '$meta{topic}' got id $meta{id}");
                 if (not exists $state{__last_id}{ $meta{username} }{__search}{ $meta{topic} }
-                        or $meta{id} >= $state{__last_id}{ $meta{username} }{__search}{ $meta{topic} } ) {
+                        or $state{__last_id}{ $meta{username} }{__search}{ $meta{topic} } eq '9223372036854775807'
+                        or cmp_id($meta{id}, $state{__last_id}{ $meta{username} }{__search}{ $meta{topic} }) > 0) {
                     $state{__last_id}{ $meta{username} }{__search}{ $meta{topic} } = $meta{id};
                 } else {
                     &debug("%G$meta{username}%n Search '$meta{topic}' bad id $meta{id}");
@@ -2651,10 +2648,10 @@ sub monitor_child {
                 }
             } elsif ( $meta{type} eq 'last_id') {
                 $state{__last_id}{ $meta{username} }{ $meta{id_type} } = $meta{id}
-                  if $state{__last_id}{ $meta{username} }{ $meta{id_type} } < $meta{id};
+                  if cmp_id($meta{id}, $state{__last_id}{ $meta{username} }{ $meta{id_type} }) > 0;
             } elsif ( $meta{type} eq 'last_id_fixreplies' ) {
                 $state{__last_id}{ $meta{username} }{__extras}{ $meta{id_type} } = $meta{id}
-                  if $state{__last_id}{ $meta{username} }{__extras}{ $meta{id_type} } < $meta{id};
+                  if cmp_id($meta{id}, $state{__last_id}{ $meta{username} }{__extras}{ $meta{id_type} }) > 0;
             }
 
         } elsif ($type eq 'tweet' or $type eq 'dm' or $type eq 'reply' or $type eq 'search' or $type eq 'search_once') {	# cf theme_register
@@ -2676,7 +2673,7 @@ sub monitor_child {
 
             if ( $meta{type} eq 'search' ) {
                 if ( exists $state{__last_id}{ $meta{username} }{__search}{ $meta{topic} }
-                        and $meta{id} > $state{__last_id}{ $meta{username} }{__search}{ $meta{topic} } ) {
+                        and cmp_id($meta{id}, $state{__last_id}{ $meta{username} }{__search}{ $meta{topic} }) > 0) {
                     $state{__last_id}{ $meta{username} }{__search}{ $meta{topic} } = $meta{id};
                 }
             } elsif ( $meta{type} eq 'search_once' ) {
@@ -2772,6 +2769,14 @@ sub monitor_child {
         $first_call        = 0;
         $update_is_running = 0;
     }
+}
+
+sub cmp_id {
+    my $id1 = shift;
+    my $id2 = shift;
+    return -1 if length $id1 < length $id2;
+    return  1 if length $id1 > length $id2;
+    return $id1 cmp $id2;
 }
 
 sub write_lines {
@@ -3236,7 +3241,7 @@ sub event_setup_changed {
             while (defined $pre_proc and $pre_proc ne '') {
                 if ($pre_proc =~ s/^lc(?:,|$)//) {
                     $settings{$setting->[0]} = lc $settings{$setting->[0]};
-                } elsif ($pre_proc =~ s/^list{(.)}(?:,|$)//) {
+                } elsif ($pre_proc =~ s/^list\{(.)}(?:,|$)//) {
                     my $re = $1;
                     $re = qr/\s*$re\s*/ if $trim;
                     if ($settings{$setting->[0]} eq '') {
