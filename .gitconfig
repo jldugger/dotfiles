@@ -4,11 +4,13 @@
         path = ~/.gitconfig.d/alias.conf
         path = ~/.gitconfig.d/autocorrect.conf
         path = ~/.gitconfig.d/colors.conf
+        path = ~/.gitconifg.d/github.conf
         path = ~/.gitconfig.d/gitignore.conf
         path = ~/.gitconfig.d/launchpad.conf
         path = ~/.gitconfig.d/programs.conf
         path = ~/.gitconfig.d/push.conf
         path = ~/.gitconfig.d/user.conf
+        path = ~/.gitconfig.d/status.conf
         path = ~/.gitconfig.d/whitespace.conf
         # allow for local overrides
         path = ~/.gitconfig.d/private.conf
