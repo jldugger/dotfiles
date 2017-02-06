@@ -5,4 +5,6 @@
   <ignore mtime="1401427352" program="/usr/bin/gnucash"/>
   <ignore mtime="1444662531" program="/usr/lib/x86_64-linux-gnu/hud/hud-service"/>
   <ignore mtime="1476102497" program="/usr/share/apport/apport-gtk"/>
+  <ignore mtime="1472811474" program="/usr/bin/compiz"/>
+  <ignore mtime="1476373975" program="/usr/bin/gnome-software"/>
 </apport>
