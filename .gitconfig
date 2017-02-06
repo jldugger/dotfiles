@@ -12,3 +12,5 @@
         path = ~/.gitconfig.d/whitespace.conf
         # allow for local overrides
         path = ~/.gitconfig.d/private.conf
+[color]
+	ui = true
