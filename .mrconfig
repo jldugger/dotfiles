@@ -8,8 +8,17 @@ checkout = git clone 'https://github.com/jldugger/blog.git' 'blog'
 [src/albums.pwnguin.net]
 checkout = git clone 'https://github.com/jldugger/albums.pwnguin.net' 'albums.pwnguin.net'
 
-[src/pwnguin-cookbook]
-checkout = git clone 'https://github.com/jldugger/pwnguin-cookbook' 'pwnguin-cookbook'
+[src/chef-pwnguin]
+checkout = git clone 'https://github.com/jldugger/chef-repo' 'chef-pwnguin'
 
-[.fonts/awesome-terminal-fonts]
+[src/chef-pwnguin/cookbooks/desktop]
+checkout = git clone 'git@github.com:jldugger/desktop.git' 'desktop'
+
+[src/chef-pwnguin/cookbooks/pwnguin-cookbook]
+checkout = git clone 'git@github.com:jldugger/pwnguin-cookbook.git' 'pwnguin-cookbook'
+
+[src/blog]
+checkout = git clone 'https://github.com/jldugger/blog.git' 'blog'
+
+[src/awesome-terminal-fonts]
 checkout = git clone 'https://github.com/gabrielelana/awesome-terminal-fonts.git' 'awesome-terminal-fonts'
