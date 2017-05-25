@@ -128,6 +128,7 @@ data/
 .openvpn/
 .bash.d/private/
 .gitconfig.d/private.conf
+.climesyncrc
 
 # i dont want to sort through this yet
 misc/
