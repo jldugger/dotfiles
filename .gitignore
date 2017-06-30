@@ -45,6 +45,7 @@ thumbs.db
 VirtualBox VMs/
 .cache/
 .berkshelf/
+.bundle/
 .novaclient/
 .VirtualBox/
 .virtualenvs/
