@@ -62,7 +62,7 @@ channels = (
   { name = "#osuosl"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#osuosl-infra"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#osuosl-staff"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#osuosl-phb"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#osuosl-phb"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
