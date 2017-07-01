@@ -57,6 +57,7 @@ VirtualBox VMs/
 .rnd
 .pylint.d/
 .tomboy-sync/
+.terraform.d/
 
 # junk
 .subversion/README.txt
@@ -130,6 +131,7 @@ data/
 .bash.d/private/
 .gitconfig.d/private.conf
 .climesyncrc
+.gcloud/
 
 # i dont want to sort through this yet
 misc/
