@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# Teraform.io related shell settings
+
+alias tf='terraform'
+
+export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.gcloud/gcp.json"
