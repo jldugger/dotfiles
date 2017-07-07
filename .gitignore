@@ -132,6 +132,8 @@ data/
 .gitconfig.d/private.conf
 .climesyncrc
 .gcloud/
+.gsutil/
+.boto
 
 # i dont want to sort through this yet
 misc/
