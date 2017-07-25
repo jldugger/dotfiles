@@ -77,6 +77,7 @@ irclogs/
 .mysql_history
 .psql_history
 .pry_history
+.python_history
 .sqlite_history
 .wget-hsts
 .viminfo
