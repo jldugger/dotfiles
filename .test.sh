@@ -12,8 +12,7 @@ set -o pipefail
 RET=0
 for f in $(git ls-files); do
     if file "$f" | grep --quiet shell; then
-        shellcheck -x "$f" && echo "[OK]: sucessfully linted $f"
-        if [ $? -ne 0 ]; then
+        if shellcheck -x "$f" && echo "[OK]: sucessfully linted $f"; then
             RET=-1
         fi
 fi
