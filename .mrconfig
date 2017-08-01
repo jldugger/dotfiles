@@ -9,7 +9,7 @@ checkout = git clone 'https://github.com/jldugger/blog.git' 'blog'
 checkout = git clone 'https://github.com/jldugger/albums.pwnguin.net' 'albums.pwnguin.net'
 
 [src/chef-pwnguin]
-checkout = git clone 'https://github.com/jldugger/chef-repo' 'chef-pwnguin'
+checkout = git clone 'git@github.com:jldugger/chef-repo.git' 'chef-pwnguin'
 
 [src/chef-pwnguin/cookbooks/desktop]
 checkout = git clone 'git@github.com:jldugger/desktop.git' 'desktop'
