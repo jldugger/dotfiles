@@ -138,6 +138,7 @@ data/
 .boto
 
 # i dont want to sort through this yet
+bin/terraform
 misc/
 .adobe/
 .android/
