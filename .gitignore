@@ -59,7 +59,7 @@ VirtualBox VMs/
 .pylint.d/
 .tomboy-sync/
 .terraform.d/
-
+.kitchen/cache/
 # junk
 .subversion/README.txt
 .links2/bookmarks.html
