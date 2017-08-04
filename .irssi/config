@@ -53,7 +53,6 @@ chatnets = {
   "hangops-slack" = { type = "IRC"; nick = "pwnguin"; };
   "leadership-slack" = { type = "IRC"; nick = "pwnguin"; };
   "kulua-slack" = { type = "IRC"; };
-  slack = { type = "IRC"; };
 };
 
 channels = (
