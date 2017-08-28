@@ -154,6 +154,7 @@ misc/
 .chef/
 .chefdk/
 .subversion/auth/
+.gimp-2.8/
 .gnome/
 .gnome2/
 .hplip
