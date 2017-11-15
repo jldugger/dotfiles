@@ -60,6 +60,8 @@ VirtualBox VMs/
 .tomboy-sync/
 .terraform.d/
 .kitchen/cache/
+.m2/repository/
+
 # junk
 .subversion/README.txt
 .links2/bookmarks.html
