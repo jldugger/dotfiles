@@ -59,6 +59,24 @@ width_maximum_multiplier=1.25
 buttons_switch_mappings=false
 # automatically load filename.pdf.xoj instead of filename.pdf (true/false)
 autoload_pdf_xoj=false
+# ignore events from other devices while drawing (true/false)
+ignore_other_devices=true
+# do not worry if device reports button isn't pressed while drawing (true/false)
+ignore_btn_reported_up=true
+# always map touchscreen device to hand tool (true/false) (requires separate pen and touch devices)
+touchscreen_as_hand_tool=false
+# disable touchscreen device when pen is in proximity (true/false) (requires separate pen and touch devices)
+pen_disables_touch=false
+# name of touchscreen device for touchscreen_as_hand_tool
+touchscreen_device_name=Touchscr
+# enable periodic autosaves (true/false)
+autosave_enabled=false
+# delay for periodic autosaves (in seconds)
+autosave_delay=5
+# force PDF rendering through cairo (slower but nicer) (true/false)
+poppler_force_cairo=false
+# prefer xournal's own PDF code for exporting PDFs (true/false)
+exportpdf_prefer_legacy=false
 
 [paper]
 # the default page width, in points (1/72 in)
@@ -83,6 +101,8 @@ progressive_bg=true
 gs_bitmap_dpi=144
 # bitmap resolution of PDF backgrounds when printing with libgnomeprint (dpi)
 pdftoppm_printing_dpi=150
+# when creating a new page, duplicate a PDF or image background instead of using default paper (true/false)
+new_page_duplicates_bg=false
 
 [tools]
 # selected tool at startup (pen, eraser, highlighter, selectrect, vertspace, hand)
@@ -147,3 +167,5 @@ highlighter_recognizer=false
 btn2_recognizer=false
 # button 3 shape recognizer mode (true/false) (pen or highlighter only)
 btn3_recognizer=false
+# Use the pencil from cursor theme instead of a color dot (true/false)
+pen_cursor=false

@@ -85,6 +85,7 @@ irclogs/
 .wget-hsts
 .viminfo
 .vim/
+.xournal/recent-files
 
 # myrepos managed
 src/
