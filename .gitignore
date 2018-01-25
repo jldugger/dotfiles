@@ -15,6 +15,7 @@
 *.backup
 temp/
 tmp/
+.Trash/
 
 # desktop crap
 .DS_Store
@@ -23,8 +24,11 @@ Desktop/
 Documents/
 Downloads/
 FiraxisLive/
+Library/
+Movies/
 Music/
 Pictures/
+Public/
 Recordings/
 Ubuntu One/
 .dmrc
@@ -73,6 +77,7 @@ irclogs/
 
 # histories
 .bash_history
+.bash_sessions/
 .gnuplot_history
 .ldapvi_history
 .lesshst
