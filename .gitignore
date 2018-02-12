@@ -20,6 +20,7 @@ tmp/
 # desktop crap
 .DS_Store
 Desktop.ini
+Applications/
 Desktop/
 Documents/
 Downloads/
