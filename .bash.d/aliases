@@ -4,7 +4,7 @@
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-
+alias ls='ls --color'
 
 alias gfr="git pull --rebase"
 alias mtr='mtr -t'

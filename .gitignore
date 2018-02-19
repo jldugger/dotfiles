@@ -66,6 +66,7 @@ VirtualBox VMs/
 .terraform.d/
 .kitchen/cache/
 .m2/repository/
+.rbenv/
 
 # junk
 .subversion/README.txt
