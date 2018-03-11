@@ -73,6 +73,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     source /etc/bash_completion
 fi
 
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+# shellcheck disable=SC1091
+[ -f /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
 
 export EDITOR=vim
