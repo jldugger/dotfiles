@@ -1,3 +1,4 @@
 # global excludes file. gitignore, but for all repos ever
 
 .kitchen.list.yml
+.vscode/
