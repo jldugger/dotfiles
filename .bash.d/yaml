@@ -1,0 +1,7 @@
+#!/bin/bash
+# https://stackoverflow.com/a/20420243/9947
+# parse YAML file
+
+function yaml {
+  ruby -e "require 'yaml';YAML.load_file('$1')"
+}
