@@ -160,6 +160,7 @@ misc/
 .compiz-old/
 .compiz-1/
 .eclipse/
+.edgerc
 .local/
 .gconf/
 .config/
