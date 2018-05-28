@@ -68,7 +68,7 @@ VirtualBox VMs/
 .kitchen/cache/
 .m2/repository/
 .rbenv/
-
+venv/
 # junk
 .subversion/README.txt
 .links2/bookmarks.html
