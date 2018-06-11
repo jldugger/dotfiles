@@ -49,6 +49,7 @@ Ubuntu One/
 # caches
 thumbs.db
 *.swp
+Box/
 VirtualBox VMs/
 .cache/
 .berkshelf/
