@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 printf '%d.%d.%d.%d\n' \
     $(( 0x${1:0:2} )) \
     $(( 0x${1:2:2} )) \

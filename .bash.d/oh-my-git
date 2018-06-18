@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # enable oh-my-git
 if [ -f ~/.oh-my-git/prompt.sh ]; then

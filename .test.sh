@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # looted from jessfraz:
 #   https://github.com/jessfraz/dotfiles/commits/master/test.sh

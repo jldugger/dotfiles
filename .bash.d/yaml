@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # https://stackoverflow.com/a/20420243/9947
 # parse YAML file
 
