@@ -4,7 +4,7 @@
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-if [ $(uname) == 'Darwin' ]; then
+if [ "$(uname)" == 'Darwin' ]; then
   alias ls='gls --color'
 else
   alias ls='ls --color'
