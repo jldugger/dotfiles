@@ -54,10 +54,12 @@ VirtualBox VMs/
 .cache/
 .berkshelf/
 .bundle/
+.gitbook/
 .novaclient/
 .VirtualBox/
 .virtualenvs/
 .java/
+.npm/
 .steam/
 .cpan/
 .liferea/
