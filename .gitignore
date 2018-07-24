@@ -137,6 +137,7 @@ data/
 *.crt
 .aws/
 .ssh/
+.secrets/
 .mrtrust
 .subversion/auth/
 .gnupg
