@@ -72,6 +72,7 @@ VirtualBox VMs/
 .m2/repository/
 .rbenv/
 venv/
+
 # junk
 .subversion/README.txt
 .links2/bookmarks.html
@@ -155,6 +156,7 @@ data/
 # i dont want to sort through this yet
 bin/terraform
 misc/
+.oracle_jre_usage/
 .adobe/
 .android/
 .atom/
