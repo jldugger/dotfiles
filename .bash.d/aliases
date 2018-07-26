@@ -22,3 +22,8 @@ alias dsh='dsh -c -M'
 function trim {
   awk '{$1=$1};1'
 }
+
+# cd to root of git checkout
+function git {
+  source ~/bin/git-wrapper.sh
+}
