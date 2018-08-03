@@ -52,26 +52,15 @@ thumbs.db
 Box/
 VirtualBox VMs/
 .cache/
-.berkshelf/
-.bundle/
-.gitbook/
 .novaclient/
 .VirtualBox/
-.virtualenvs/
-.java/
-.npm/
 .steam/
-.cpan/
 .liferea/
 .liferea_1.8/
 .rnd
-.pylint.d/
 .tomboy-sync/
 .terraform.d/
 .kitchen/cache/
-.m2/repository/
-.rbenv/
-venv/
 
 # junk
 .subversion/README.txt
@@ -81,6 +70,24 @@ venv/
 *.log
 *_log
 irclogs/
+
+# devel / IDE junk
+.atom/
+.gitbook/
+.m2/repository/
+.pylint.d/
+.vscode/extensions/
+
+# language cache junk
+.berkshelf/
+.bundle/
+.cpan/
+.gradle/
+.java/
+.npm/
+.rbenv/
+venv/
+.virtualenvs/
 
 # histories
 .bash_history
@@ -160,7 +167,6 @@ misc/
 .oracle_jre_usage/
 .adobe/
 .android/
-.atom/
 .cfagent/
 .compiz/
 .compiz-old/
@@ -189,4 +195,3 @@ misc/
 .sad/
 .q3a/
 .spamassassin/
-.vscode/extensions/
