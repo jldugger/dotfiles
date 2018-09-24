@@ -86,6 +86,7 @@ irclogs/
 .java/
 .npm/
 .rbenv/
+.tooling/
 venv/
 .virtualenvs/
 
