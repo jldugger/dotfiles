@@ -1,4 +1,4 @@
-# the following patterns will be ignored for revision control purposes
+# the following patterns will be ignored for revision control purpose
 
 # temporary backups
 *~
@@ -84,11 +84,13 @@ irclogs/
 .cpan/
 .gradle/
 .java/
+.node-gyp/
 .npm/
 .rbenv/
 .tooling/
 venv/
 .virtualenvs/
+.yarnrc
 
 # histories
 .bash_history
