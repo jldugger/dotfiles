@@ -96,6 +96,7 @@ irclogs/
 venv/
 .virtualenvs/
 .yarnrc
+__pycache__/
 
 # histories
 .bash_history
@@ -168,7 +169,7 @@ data/
 .gsutil/
 .boto
 .weechat/irc.conf
-
+bin/private
 # i dont want to sort through this yet
 bin/terraform
 misc/
