@@ -90,6 +90,7 @@ irclogs/
 .java/
 .node-gyp/
 .npm/
+.matplotlib/
 .rbenv/
 .tooling/
 venv/
