@@ -32,6 +32,9 @@ Pictures/
 Public/
 Recordings/
 Ubuntu One/
+iCloud Drive/
+iCloud Drive (Archive)/
+iCloud Drive (Archive) - 1/
 .cups/
 .dmrc
 .gtk-bookmarks
@@ -74,6 +77,7 @@ irclogs/
 # devel / IDE junk
 .atom/
 .gitbook/
+.ipython/
 .m2/repository/
 .pylint.d/
 .vscode/extensions/
