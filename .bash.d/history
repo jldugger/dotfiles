@@ -3,10 +3,21 @@
 # append to the history file, don't overwrite it
 shopt -s histappend
 
+# force multiline commands into a single line in history
+# per https://sanctum.geek.nz/arabesque/better-bash-history/
+shopt -s cmdhist
+
 # don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups:ignorespace
+
+# ignore common & readonly commands
+# per https://sanctum.geek.nz/arabesque/better-bash-history/
+export HISTIGNORE='ls:bg:fg'
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 export HISTFILESIZE=1000000000
 export HISTSIZE=1000000
 
+# record timestamps
+# per https://sanctum.geek.nz/arabesque/better-bash-history/
+export HISTTIMEFORMAT='%F %T '

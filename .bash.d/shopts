@@ -11,3 +11,7 @@ shopt -s cdspell
 
 # do not check for mail
 shopt -u mailwarn
+
+# force multiline commands into a single line in history
+# per https://sanctum.geek.nz/arabesque/better-bash-history/
+shopt -s cmdhist
