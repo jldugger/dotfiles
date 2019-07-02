@@ -110,6 +110,7 @@ __pycache__/
 .pry_history
 .python_history
 .sqlite_history
+.rediscli_history
 .wget-hsts
 .viminfo
 .vim/
