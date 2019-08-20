@@ -106,6 +106,7 @@ __pycache__/
 .lesshst
 .lvm_history
 .mysql_history
+.node_repl_history
 .psql_history
 .pry_history
 .python_history
