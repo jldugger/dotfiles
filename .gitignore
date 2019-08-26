@@ -64,6 +64,8 @@ VirtualBox VMs/
 .tomboy-sync/
 .terraform.d/
 .kitchen/cache/
+.kube/cache/
+.kube/http-cache/
 
 # junk
 .subversion/README.txt
