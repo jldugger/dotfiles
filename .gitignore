@@ -164,6 +164,7 @@ data/
 # i dont want to sort through this yet
 bin/terraform
 misc/
+snap/
 .oracle_jre_usage/
 .adobe/
 .android/
