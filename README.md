@@ -12,6 +12,20 @@ This dotfile repo is intended to organize $HOME. The layout is:
  * **doc/**: documents I guess?
  * **tmp/**: scratch space for quick tests
  
+# Installation
+
+Installing a dotfiles repo into an existing homedir is a bit tricky, as
+git clone will refuse to work on non-empty directories. But it can be done!
+
+    $ git init
+    $ git remote add -t \* -f origin https://github.com/jldugger/dotfiles.git
+    $ git checkout -f master
+
+Any local changes or history will be overridden though. After that, pull in sub-projects
+with mr:
+
+    $ mr update
+
 # Philosophy
 
 Here, I mostly ignore the XDG standards, but shouldn't interfere with them (much).
