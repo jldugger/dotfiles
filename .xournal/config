@@ -77,6 +77,12 @@ autosave_delay=5
 poppler_force_cairo=false
 # prefer xournal's own PDF code for exporting PDFs (true/false)
 exportpdf_prefer_legacy=false
+# fix origin of strokes (devices with unreliable button press coordinates, e.g. Lenovo's AES pens) (true/false)
+fix_stroke_origin=false
+# when attempting to open a non-existent file, treat it as a new file (true/false)
+autocreate_new_xoj=false
+# export successive layers on separate pages in PDFs (true/false)
+exportpdf_layers=false
 
 [paper]
 # the default page width, in points (1/72 in)
