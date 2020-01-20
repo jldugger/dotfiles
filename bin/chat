@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-screen -d -R -U
+tmux attach
