@@ -24,6 +24,7 @@ function trim {
 }
 
 # cd to root of git checkout
+# shellcheck source=bin/git-wrapper.sh
 function git {
   source ~/bin/git-wrapper.sh
 }
