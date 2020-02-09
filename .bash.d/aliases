@@ -28,3 +28,7 @@ function trim {
 function git {
   source ~/bin/git-wrapper.sh
 }
+
+# typos
+
+alias gti="git"
