@@ -1,6 +1,6 @@
 ## dotfiles
 
-[![Travis CI](https://travis-ci.org/jldugger/dotfiles.svg?branch=master)](https://travis-ci.org/jldugger/dotfiles)
+[![Travis CI](https://travis-ci.org/jldugger/dotfiles.com?branch=master)](https://travis-ci.com/jldugger/dotfiles)
 
 # Purpose
 
