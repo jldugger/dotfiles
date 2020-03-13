@@ -118,6 +118,7 @@ __pycache__/
 .viminfo
 .vim/
 .xournal/recent-files
+.zsh_history
 
 # myrepos managed
 src/
