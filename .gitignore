@@ -159,6 +159,8 @@ data/
 .ssh/
 .secrets/
 .mrtrust
+.netrc
+.secretsrc
 .subversion/auth/
 .gnupg
 .gnucash/
