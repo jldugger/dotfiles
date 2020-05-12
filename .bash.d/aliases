@@ -32,3 +32,5 @@ function git {
 # typos
 
 alias gti="git"
+
+alias k='kubectl'
