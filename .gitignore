@@ -177,6 +177,7 @@ data/
 .boto
 .weechat/irc.conf
 bin/private
+
 # i dont want to sort through this yet
 bin/terraform
 misc/
@@ -201,6 +202,7 @@ snap/
 .gnome2/
 .hplip
 .opera/
+.paradoxlauncher/
 .pulse/
 .mozilla/
 .nv/
@@ -212,3 +214,5 @@ snap/
 .sad/
 .q3a/
 .spamassassin/
+.WorldOfGoo/
+IntoTheBreach
