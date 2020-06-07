@@ -17,6 +17,9 @@ checkout = git clone 'git@github.com:jldugger/desktop.git' 'desktop'
 [src/chef-pwnguin/cookbooks/pwnguin-cookbook]
 checkout = git clone 'git@github.com:jldugger/pwnguin-cookbook.git' 'pwnguin-cookbook'
 
+[src/chef-pwnguin/cookbooks/base-cookbook]
+checkout = git clone 'git@github.com:jldugger/base-cookbook.git' 'base-cookbook'
+
 [src/blog]
 checkout = git clone 'https://github.com/jldugger/blog.git' 'blog'
 
