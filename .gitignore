@@ -93,6 +93,7 @@ irclogs/
 .node-gyp/
 .npm/
 .matplotlib/
+.pyenv/
 .rbenv/
 .tooling/
 venv/
@@ -177,6 +178,7 @@ data/
 .boto
 .weechat/irc.conf
 bin/private
+.sieve/
 
 # i dont want to sort through this yet
 bin/terraform
