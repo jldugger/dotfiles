@@ -24,7 +24,6 @@ Applications/
 Desktop/
 Documents/
 Downloads/
-FiraxisLive/
 Library/
 Movies/
 Music/
@@ -83,6 +82,7 @@ irclogs/
 .m2/repository/
 .pylint.d/
 .vscode/extensions/
+.Genymobile/
 
 # language cache junk
 .berkshelf/
@@ -94,6 +94,7 @@ irclogs/
 .npm/
 .matplotlib/
 .pyenv/
+.mono/
 .rbenv/
 .tooling/
 venv/
@@ -136,6 +137,10 @@ src/
 *.sqlite
 *.db
 data/
+
+# ebooks
+*.epub
+*.opf
 
 # binaries
 *.so
@@ -214,8 +219,14 @@ snap/
 .steampath
 .steampid
 .sad/
-.q3a/
+.thunderbird/
 .spamassassin/
 .kube/
+
+# games
+.q3a/
+.systemshock2/
+.This War of Mine/
 .WorldOfGoo/
+FiraxisLive/
 IntoTheBreach
