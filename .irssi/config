@@ -298,3 +298,14 @@ windows = {
 };
 mainwindows = { 12 = { first_line = "1"; lines = "75"; }; };
 
+chatnets = { libera = { type = "IRC"; }; };
+servers = (
+  {
+    address = "irc.libera.chat";
+    chatnet = "libera";
+    port = "6697";
+    use_tls = "yes";
+    tls_verify = "yes";
+    autoconnect = "yes";
+  }
+);
