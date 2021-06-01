@@ -2,7 +2,7 @@
 
 [![Travis CI](https://travis-ci.com/jldugger/dotfiles.svg?branch=master)](https://travis-ci.com/jldugger/dotfiles)
 
-# Purpose
+### Purpose
 
 This dotfile repo is intended to organize $HOME. The layout is:
 
@@ -12,7 +12,7 @@ This dotfile repo is intended to organize $HOME. The layout is:
  * **doc/**: documents I guess?
  * **tmp/**: scratch space for quick tests
  
-# Installation
+### Installation
 
 Installing a dotfiles repo into an existing homedir is a bit tricky, as
 git clone will refuse to work on non-empty directories. But it can be done!
@@ -26,7 +26,7 @@ with mr:
 
     $ mr update
 
-# Philosophy
+### Philosophy
 
 Here, I mostly ignore the XDG standards, but shouldn't interfere with them (much).
 
@@ -36,6 +36,6 @@ directives will be preferred.
 Some bits of the homedir are actually git repositories of their own. These are managed with
 [myrepos](https://myrepos.branchable.com/), which is tracked in `.mrconfig`.
 
-# Testing / CI
+### Testing / CI
 
 Bash scripts are validated using [shellcheck](https://github.com/koalaman/shellcheck) and Travis.
