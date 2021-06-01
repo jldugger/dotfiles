@@ -12,8 +12,11 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
-# set PATH so it includes user's private bin if it exists
+# set PATH so it includes user's bin if it exists
 if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
+    # set PATH so it includes user's private bin if it exists
+    if [ -d ~/bin/private ] ; then
+        PATH=~/bin/private:"${PATH}"
+    fi
 fi
-
