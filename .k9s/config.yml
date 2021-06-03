@@ -1,6 +1,10 @@
 k9s:
   refreshRate: 2
+  maxConnRetry: 5
+  enableMouse: false
   headless: false
+  logoless: false
+  crumbsless: false
   readOnly: false
   noIcons: false
   logger:
@@ -10,17 +14,61 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: ew11
-  currentCluster: arn:aws:eks:eu-west-1:672624372679:cluster/ew11-eks
+  currentContext: mb11
+  currentCluster: arn:aws:eks:ap-south-1:672624372679:cluster/mb11-eks
   clusters:
-    arn:aws:eks:eu-west-1:672624372679:cluster/ew11-eks:
+    arn:aws:eks:ap-south-1:672624372679:cluster/mb11-eks:
       namespace:
-        active: ew11sa
+        active: mb11sa
         favorites:
-        - ew11sa
+        - mb11sa
         - default
       view:
-        active: pods
+        active: po mb11sa
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:672624372679:cluster/sy11-eks:
+      namespace:
+        active: sy11sa
+        favorites:
+        - sy11sa
+        - default
+      view:
+        active: po sy11sa
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    us-east-1b:
+      namespace:
+        active: st28si-sis
+        favorites:
+        - st28si-sis
+        - st28sa
+        - default
+      view:
+        active: pods st28si-sis
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
   thresholds:
     cpu:
       critical: 90
