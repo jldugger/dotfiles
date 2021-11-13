@@ -1,6 +1,6 @@
 ## dotfiles
 
-[![Travis CI](https://travis-ci.com/jldugger/dotfiles.svg?branch=master)](https://travis-ci.com/jldugger/dotfiles)
+[![Travis CI](https://travis-ci.com/jldugger/dotfiles.svg?branch=main)](https://travis-ci.com/jldugger/dotfiles)
 
 # Purpose
 
@@ -19,7 +19,7 @@ git clone will refuse to work on non-empty directories. But it can be done!
 
     $ git init
     $ git remote add -t \* -f origin https://github.com/jldugger/dotfiles.git
-    $ git checkout -f master
+    $ git checkout -f main
 
 Any local changes or history will be overridden though. After that, pull in sub-projects
 with mr:
