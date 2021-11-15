@@ -1,1 +1,5 @@
-. $(brew --prefix asdf)/asdf.sh
+# macOS
+if [ $(which brew) ]
+then
+    . $(brew --prefix asdf)/asdf.sh
+fi
