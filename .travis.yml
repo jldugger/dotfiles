@@ -1,5 +1,0 @@
-language: bash
-notifications:
-  email: true
-script:
-- ./.test.sh
