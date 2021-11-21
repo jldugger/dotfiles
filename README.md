@@ -1,7 +1,6 @@
 ## dotfiles
 
-[![Travis CI](https://travis-ci.com/jldugger/dotfiles.svg?branch=main)](https://travis-ci.com/jldugger/dotfiles)
-
+[![CI](https://github.com/jldugger/dotfiles/actions/workflows/main.yml/badge.svg)](https://github.com/jldugger/dotfiles/actions/workflows/main.yml)
 # Purpose
 
 This dotfile repo is intended to organize $HOME. The layout is:
