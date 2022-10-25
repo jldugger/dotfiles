@@ -65,6 +65,7 @@ VirtualBox VMs/
 .kitchen/cache/
 .kube/cache/
 .kube/http-cache/
+.ansible/
 
 # junk
 .subversion/README.txt
@@ -102,6 +103,7 @@ venv/
 .virtualenvs/
 .yarnrc
 __pycache__/
+go/
 
 # histories
 .bash_history
