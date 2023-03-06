@@ -53,6 +53,7 @@ thumbs.db
 *.swp
 Box/
 VirtualBox VMs/
+.ansible/
 .cache/
 .novaclient/
 .VirtualBox/
