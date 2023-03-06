@@ -84,6 +84,7 @@ irclogs/
 .pylint.d/
 .vscode/extensions/
 .Genymobile/
+go/
 
 # language cache junk
 .berkshelf/
