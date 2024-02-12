@@ -83,6 +83,7 @@ irclogs/
 .m2/repository/
 .pylint.d/
 .vscode/extensions/
+.vscode-oss/
 .Genymobile/
 
 # language cache junk
