@@ -110,9 +110,11 @@ go/
 .bash_history
 .bash_sessions/
 .gnuplot_history
+.irb_history
 .ldapvi_history
 .lesshst
 .lvm_history
+.lldb/lldb-widehistory
 .mysql_history
 .node_repl_history
 .psql_history
@@ -200,6 +202,7 @@ snap/
 .compiz/
 .compiz-old/
 .compiz-1/
+.docker/
 .eclipse/
 .edgerc
 .local/
