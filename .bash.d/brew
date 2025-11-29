@@ -1,0 +1,5 @@
+# surprise and delight
+export HOMEBREW_NO_ANALYTICS=1
+
+# "hide these hints"
+export HOMEBREW_NO_ENV_HINTS=true
