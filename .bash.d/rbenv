@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 if [ "$(command -v rbenv)" ]; then
-  eval "$(rbenv init - bash)"
+  eval "$(rbenv init - --no-rehash bash)"
 fi
