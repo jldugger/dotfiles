@@ -74,6 +74,7 @@ VirtualBox VMs/
 # logs
 *.log
 *_log
+*.log.txt
 irclogs/
 
 # devel / IDE junk
