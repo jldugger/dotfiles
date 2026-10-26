@@ -96,6 +96,7 @@ irclogs/
 .node-gyp/
 .npm/
 .matplotlib/
+perl5/
 .pyenv/
 .mono/
 .rbenv/
@@ -147,6 +148,7 @@ data/
 # ebooks
 *.epub
 *.opf
+*.mobi
 
 # binaries
 *.so
@@ -237,3 +239,6 @@ snap/
 .WorldOfGoo/
 FiraxisLive/
 IntoTheBreach
+Games
+games
+.wine/

@@ -7,4 +7,5 @@
   <ignore mtime="1476102497" program="/usr/share/apport/apport-gtk"/>
   <ignore mtime="1472811474" program="/usr/bin/compiz"/>
   <ignore mtime="1476373975" program="/usr/bin/gnome-software"/>
+  <ignore program="/usr/libexec/xdg-desktop-portal-gtk" mtime="1648202039"/>
 </apport>

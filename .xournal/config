@@ -83,6 +83,10 @@ fix_stroke_origin=false
 autocreate_new_xoj=false
 # export successive layers on separate pages in PDFs (true/false)
 exportpdf_layers=false
+# use pen speed to control pen stroke width (true/false)
+speed_sensitivity=false
+# speed threshold for speed-sensitive stroke width to reach minimum
+speed_min_width_threshold=400.0
 
 [paper]
 # the default page width, in points (1/72 in)
